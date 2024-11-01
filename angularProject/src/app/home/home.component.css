@@ -1,0 +1,9 @@
+nav img{
+    padding-left: 80px;
+}
+.search{
+display: flex;
+ width: 500px;
+ align-items: center;
+ background-color: aliceblue;
+}
