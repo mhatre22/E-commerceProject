@@ -13,4 +13,7 @@ export class HomeComponent {
   goToLogin(): void {
     this.router.navigateByUrl('login')
   }
+  gotoGrocery():void{
+    this.router.navigateByUrl('grocery')
+  }
 }

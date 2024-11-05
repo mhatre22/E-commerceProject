@@ -10,7 +10,4 @@ export class GroceryComponent {
 constructor( private route:Router){
 
 }
-gotovege(){
-  this.route.navigateByUrl('')
-}
 }

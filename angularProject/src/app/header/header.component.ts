@@ -10,7 +10,7 @@ export class HeaderComponent {
 
   constructor(private router: Router) { }
 
-  goToLogin(): void {
+  goToLogin() {
     this.router.navigateByUrl('login')
   }
 }
