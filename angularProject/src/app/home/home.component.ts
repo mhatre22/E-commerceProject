@@ -11,6 +11,6 @@ export class HomeComponent {
   constructor(private router: Router) { }
 
   goToLogin(): void {
-    this.router.navigate(['/login']);
+    this.router.navigateByUrl('login')
   }
 }

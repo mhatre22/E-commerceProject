@@ -1,3 +1,19 @@
-p{
-    color: red;
+.container{
+background-color: rgb(91, 145, 245);
+width: 100%;
+padding-left: 25px;
+padding-right: 25px;
+font-weight: bold;
+
+
+}
+.new{
+    text-align: end;
+    font-weight: 400;
+    color: rgb(11, 7, 7);
+    font-size: large;
+}
+
+h4{
+    color: rgb(216, 212, 212);
 }
