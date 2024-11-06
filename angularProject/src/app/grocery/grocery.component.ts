@@ -7,7 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./grocery.component.css']
 })
 export class GroceryComponent {
-constructor( private route:Router){
+constructor( private router:Router){
 
+}
+goTovegetable(){
+  this.router.navigate(['/grocery/vegetables'])
+}
+goTodairyproduct(){
+  this.router.navigate(['/grocery/dairyproducts'])
+}
+goTostaples(){
+  this.router.navigate(['/grocery/staples'])
 }
 }

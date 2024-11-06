@@ -1,29 +1,34 @@
-<!---<div class="grocery">
+<br/><br/> 
+<h5>To continue shopping for EasyBuy Fresh, <br/>& Happy Shopping.</h5>
+<hr/>
+<div class="grocery">
     <div class="row">
-         Vegetables Section 
+    
         <div class="col">
-            <a routerLink='/grocery/vegetables'>
+            <a (click)="goTovegetable()">
                 <img src="assets/E-commerce Project images/vegetables-basket.jpg" height="180px" width="220px"> 
-                <br/>Vegetables
+                <br/><b><u>Vegetables</u></b>
             </a>
         </div>
         
-       Dairy Product & Egg Section 
+    
         <div class="col">
-            <a routerLink='/grocery/dairyproducts'>
+            <a (click)='goTodairyproduct()'>
                 <img src="assets/E-commerce Project images/dairyproduct.png" height="180px" width="220px">
-                <br/>DairyProduct & Egg
+                <br/><b><u>DairyProduct & Egg</u></b>
             </a>
         </div>
         
-         Staples Section
+    
         <div class="col">
-            <a routerLink='/grocery/staples'>
+            <a (click)='goTostaples()'>
                 <img src="assets/E-commerce Project images/straples.png" height="180px" width="220px">
-                <br/>Staples
+                <br/><b><u>Staples</u></b>
             </a>
         </div>
-    </div> Closing .row 
+    </div> 
          
 
-</div>    -->
+</div><br/> 
+<hr/> 
+<router-outlet></router-outlet>  

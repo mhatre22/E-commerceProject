@@ -6,14 +6,14 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent{
 
   constructor(private router: Router) { }
 
   goToLogin(): void {
-    this.router.navigateByUrl('login')
+    this.router.navigateByUrl('/login')
   }
   gotoGrocery():void{
-    this.router.navigateByUrl('grocery')
+    this.router.navigateByUrl('/grocery')
   }
 }

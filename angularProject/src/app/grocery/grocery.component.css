@@ -1,3 +1,12 @@
 .grocery{
-    padding-left: 150px;
+    padding-left: 125px;
+    padding-right: 95px;
+    text-align: center;
+    font-size: 18px;
+}
+.display{
+    display: inline-flex;
+}
+h5{
+    padding-left: 20px;
 }
