@@ -8,6 +8,10 @@ import { GroceryComponent } from './grocery/grocery.component';
 import { VegetableComponent } from './vegetable/vegetable.component';
 import { StaplesComponent } from './staples/staples.component';
 import { DairyproductComponent } from './dairyproduct/dairyproduct.component';
+import { SellersignupComponent } from './sellersignup/sellersignup.component';
+import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
+import { SellerhomeComponent } from './sellerhome/sellerhome.component';
+
 const routes: Routes = [
   {
     path: 'login',component:LoginComponent
@@ -22,8 +26,11 @@ const routes: Routes = [
       {path:'staples', component:StaplesComponent},
       {path:'dairyproducts', component:DairyproductComponent},
     ]
-  }
-  
+  },
+  {path:'sellersignup',component:SellersignupComponent},
+  {path:'sellerlogin',component:SellerloginComponent},
+  {path:'sellerhome',component:SellerhomeComponent},
+
 
 ];
 

@@ -1,0 +1,35 @@
+<br/><br/>
+<div class="container">
+  <h3>Looks like you're new<br/> Seller here</h3>
+<h5>Sign up Seller with your details <br/>to get started</h5>
+  <form #sellerSignupForm="ngForm" (ngSubmit)="sellerSignup(sellerSignupForm)"><br/>
+    <div>
+      <label for="name" class="form-label">Enter Full Name :</label>
+      <input class="form-control" type="text" ngModel name="name" required/>
+
+      <label for="email" class="form-label">Email Id :</label>
+      <input class="form-control" type="email" ngModel name="email" required/>
+
+      <label for="contact" class="form-label">Contact :</label>
+      <input class="form-control" type="contact" ngModel name="contact" required/>
+
+      <label for="address" class="form-label">Address :</label>
+      <input class="form-control" type="address" ngModel name="address" required/><br/>
+      <label for="address" class="form-label">Address :</label>
+      <input class="form-control" type="address" ngModel name="address" required/><br/>
+
+      <label for="company" class="form-label">Comapny :</label>
+      <input class="form-control" type="company" ngModel name="company" required/><br/>
+
+ <label for="product" class="form-label">Product  :</label>
+      <input class="form-control" type="product" ngModel name="product" required/><br/>
+      
+
+    <button class="btn btn-warning form-control" type="submit"    [disabled]="!sellerSignupForm.valid"><b><u> SELLER SIGNUP</u></b></button>&nbsp;
+    </div>
+  </form>
+
+</div>
+
+
+

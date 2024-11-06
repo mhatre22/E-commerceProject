@@ -1,0 +1,14 @@
+<div class="container"><br/><br/>
+    <h3> Seller Login<br/></h3>
+    <h4>Explore our product recommendations with<br/> Dhamaka Selection</h4>&nbsp;
+    <form #sellerLoginForm="ngForm" (ngSubmit)="sellerLogin(sellerLoginForm)">
+      <label for="email"  class="form-label">Email ID:</label>
+      <input type="email" class="form-control" name="email" ngModel required/>
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" class="form-control" name="password" ngModel required>
+      <label for="confirmpassword" class="form-label"> Confirm Password:</label>
+      <input type="password" class="form-control" name="confirmpassword" ngModel required>&nbsp;
+      <button type="submit" class="btn btn-warning form-control"><b><u> SELLER LOGIN</u></b></button>&nbsp;&nbsp;&nbsp;
+      <a class="new" (click)="gotoSellersignup()">New Seller Register ?</a><br/><br/>
+      </form>
+    </div>

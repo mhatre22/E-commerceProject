@@ -1,0 +1,26 @@
+{
+  "sellerData": [
+    {
+      "id": "9125",
+      "name": "Ramesh Mane",
+      "address": "Mumbai",
+      "contact": "7894561237",
+      "email": "ramesh@gmail.com",
+      "password": "ramesh@123",
+      "company": "Confianza PVT LMD",
+      "product": "Grocery"
+    }
+  ],
+  "userData": [
+    {
+      "id": "74ea",
+      "name": "Sita Mhatre",
+      "address": "Pune",
+      "contact": "7945621369",
+      "email": "sita@gmail.com",
+      "password": "sita@123",
+      "product": "Redmi Mobile",
+      "price": "15000"
+    }
+  ]
+}
