@@ -12,7 +12,9 @@ import { EcommerceService } from 'src/assets/Services/ecommerce.service';
 export class SellerloginComponent implements OnInit {
 
   constructor(private router:Router,private toastr:ToastrService,
-    private ecommerce:EcommerceService,private fb:FormBuilder){}
+    private ecommerce:EcommerceService,private fb:FormBuilder){
+      localStorage.setItem("islogIn","false")
+    }
   ngOnInit(): void {
 this.loginForm = this.fb.group({
   email:[''],
@@ -33,9 +35,12 @@ this.loginForm = this.fb.group({
 
 if (user){
   this.toastr.success("SellerLogin SucessFully!!")
+  localStorage.setItem("islogIn","true")
   this.router.navigate(['sellerhome'])
 }else{
   this.toastr.error("Seller Not Found ")
+localStorage.setItem("islogIn","false")
+
 }
 });
  

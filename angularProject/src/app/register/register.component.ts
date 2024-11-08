@@ -28,11 +28,13 @@ export class RegisterComponent implements OnInit{
    console.log(rData);
    this.registerData = rData.value;
    this.ecommerce.postuserData(this.registerData).subscribe(data=>{
+    localStorage.setItem("issignUp","true")
    console.log(data);
    this.toastr.success("Signup Sucessfully!!");
    this.router.navigate(['/login'])
    },err=>{
    this.toastr.error("Something Went Wrong!!")
+   localStorage.setItem("issignUp","false")
    }
   );
  

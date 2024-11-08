@@ -12,7 +12,10 @@ import { EcommerceService } from 'src/assets/Services/ecommerce.service';
 export class SellersignupComponent implements OnInit {
   sellerSignupdata: any;
   constructor(private router:Router,private toster:ToastrService,
-    private fb :FormBuilder,private ecommerce:EcommerceService){}
+    private fb :FormBuilder,private ecommerce:EcommerceService){
+      localStorage.setItem("isSignup","false")
+    }
+  
   ngOnInit(): void {
     this.sellerSignupForm =this.fb.group({
       name :[''],
@@ -32,10 +35,12 @@ export class SellersignupComponent implements OnInit {
     this.sellerSignupdata = Signupdata.value
     this.ecommerce.postsellerdata(this.sellerSignupdata).subscribe((data)=>{
       console.log(data)
+      localStorage.setItem("isSignup","true")
       this.toster.success("Seller-Signup SucessFully!!")
       this.router.navigate(['/sellerlogin'])
     },err=>{
       this.toster.error("Something Went Wrong!!")
+      localStorage.setItem("isSignup","false")
     }
 
   );

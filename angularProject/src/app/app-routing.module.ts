@@ -11,7 +11,9 @@ import { DairyproductComponent } from './dairyproduct/dairyproduct.component';
 import { SellersignupComponent } from './sellersignup/sellersignup.component';
 import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
-
+import{sellerauthGuard} from './sellerauth.guard'
+import { UserhomeComponent } from './userhome/userhome.component';
+import { userauthGuard } from './userauth.guard';
 const routes: Routes = [
   {
     path: 'login',component:LoginComponent
@@ -29,7 +31,8 @@ const routes: Routes = [
   },
   {path:'sellersignup',component:SellersignupComponent},
   {path:'sellerlogin',component:SellerloginComponent},
-  {path:'sellerhome',component:SellerhomeComponent},
+  {path:'sellerhome',component:SellerhomeComponent,canActivate:[sellerauthGuard]},
+  {path: 'userhome',component:UserhomeComponent,canActivate:[userauthGuard]}
 
 
 ];

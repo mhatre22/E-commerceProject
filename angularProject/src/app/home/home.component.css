@@ -115,7 +115,7 @@ hr{
     margin-top: 7px;
 }
 p{
-    color: blue;
+    color: rgb(3, 3, 3);
     display: inline-flex;
 }
 .card-logo{

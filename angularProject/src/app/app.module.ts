@@ -19,6 +19,7 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import{HttpClientModule} from '@angular/common/http'
 import { provideToastr, ToastrModule } from 'ngx-toastr';  
 import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
+import { UserhomeComponent } from './userhome/userhome.component';
 
 
 
@@ -38,6 +39,7 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
     SellersignupComponent,
     SellerloginComponent,
     SellerhomeComponent,
+    UserhomeComponent,
 
 
   ],

@@ -21,6 +21,28 @@
       "product": "Mobile",
       "password": "12345",
       "Confirmpassword": "12345"
+    },
+    {
+      "id": "7a9c",
+      "name": "Snehal Mhatre",
+      "email": "mhatresnehal75@gmail.com",
+      "contact": "7083089659",
+      "address": "pen-Raigad",
+      "company": "confianza PTV LMD",
+      "product": "Mobile",
+      "password": "456",
+      "Confirmpassword": "456"
+    },
+    {
+      "id": "89dc",
+      "name": "aaaa",
+      "email": "apumhatre2325@gmail.com",
+      "contact": "7083089659",
+      "address": "pen-Raigad",
+      "company": "confianza PTV LMD",
+      "product": "Mobile",
+      "password": "12345",
+      "Confirmpassword": "12345"
     }
   ],
   "userData": [

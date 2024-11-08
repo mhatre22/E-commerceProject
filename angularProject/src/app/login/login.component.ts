@@ -12,7 +12,9 @@ import { ToastrService } from 'ngx-toastr';  // Correct import
 })
 export class LoginComponent implements OnInit {
   constructor(private router:Router,private ecommerce:EcommerceService,
-    private fb:FormBuilder, private toastr: ToastrService){}
+    private fb:FormBuilder, private toastr: ToastrService){
+      localStorage.setItem("isLogin","false");
+    }
   ngOnInit(): void {
   this.loginForm =this.fb.group({
     email:[''],
@@ -34,9 +36,11 @@ export class LoginComponent implements OnInit {
 
     if (user){
     this.toastr.success("UserLogin Suceesfully!!")
-      this.router.navigate(['']);
+    localStorage.setItem("isLogin","true")
+      this.router.navigate(['/userhome']);
     }else{
      this.toastr.error("User Not Found!!")
+     localStorage.setItem("isLogin","false")
     }
     });
 
