@@ -1,17 +1,45 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { EcommerceService } from 'src/assets/Services/ecommerce.service';
+import { ToastrService } from 'ngx-toastr';  // Correct import
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  constructor(private router:Router){}
-  logindata:any
-  login(logindata:NgForm){
-    console.log(logindata.value)
+export class LoginComponent implements OnInit {
+  constructor(private router:Router,private ecommerce:EcommerceService,
+    private fb:FormBuilder, private toastr: ToastrService){}
+  ngOnInit(): void {
+  this.loginForm =this.fb.group({
+    email:[''],
+    password:['']
+
+  });
+  }
+  loginForm :FormGroup|any;
+
+  loginData:any;
+  login(lData:FormGroup){
+    console.log(lData.value)
+    this.loginData =lData.value
+    this.ecommerce.getlogindata()
+    .subscribe(res=>{
+    const user = res.find((a :any)=>{
+      return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
+    });
+
+    if (user){
+    this.toastr.success("UserLogin Suceesfully!!")
+      this.router.navigate(['']);
+    }else{
+     this.toastr.error("User Not Found!!")
+    }
+    });
+
   }
   gotoRegistraion(){
 this.router.navigateByUrl('register')

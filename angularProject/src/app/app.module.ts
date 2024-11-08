@@ -17,6 +17,9 @@ import { SellersignupComponent } from './sellersignup/sellersignup.component';
 import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import{HttpClientModule} from '@angular/common/http'
+import { provideToastr, ToastrModule } from 'ngx-toastr';  
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -36,15 +39,23 @@ import{HttpClientModule} from '@angular/common/http'
     SellerloginComponent,
     SellerhomeComponent,
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-     FormsModule,
+  FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+
   ],
-  providers: [],
+  providers: [
+    provideAnimations(),
+    provideToastr()
+  ] ,
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

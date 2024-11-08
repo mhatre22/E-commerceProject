@@ -1,26 +1,46 @@
 {
   "sellerData": [
     {
-      "id": "9125",
-      "name": "Ramesh Mane",
-      "address": "Mumbai",
-      "contact": "7894561237",
-      "email": "ramesh@gmail.com",
-      "password": "ramesh@123",
-      "company": "Confianza PVT LMD",
-      "product": "Grocery"
+      "id": "eefc",
+      "name": "Snehal Mhatre",
+      "email": "mhatresnehal75@gmail.com",
+      "contact": "7083089659",
+      "address": "pen-Raigad",
+      "company": "confianza PTV LMD",
+      "product": "Mobile",
+      "password": "12345",
+      "Confirmpassword": "12345"
+    },
+    {
+      "id": "b2a1",
+      "name": "aaaa",
+      "email": "apumhatre2325@gmail.com",
+      "contact": "7083089659",
+      "address": "pen-Raigad",
+      "company": "confianza PTV LMD",
+      "product": "Mobile",
+      "password": "12345",
+      "Confirmpassword": "12345"
     }
   ],
   "userData": [
     {
-      "id": "74ea",
-      "name": "Sita Mhatre",
-      "address": "Pune",
-      "contact": "7945621369",
-      "email": "sita@gmail.com",
-      "password": "sita@123",
-      "product": "Redmi Mobile",
-      "price": "15000"
+      "id": "051c",
+      "name": "Snehal Mhatre",
+      "email": "mhatresnehal75@gmail.com",
+      "address": "pen-Raigad",
+      "contact": "7083089659",
+      "password": "12345",
+      "confirmpassword": "12345"
+    },
+    {
+      "id": "b34a",
+      "name": "Snehal Mhatre",
+      "email": "mhatresnehal75@gmail.com",
+      "address": "pen-Raigad",
+      "contact": "7083089659",
+      "password": "12345",
+      "confirmpassword": "12345"
     }
   ]
 }

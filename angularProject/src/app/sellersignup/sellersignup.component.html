@@ -2,28 +2,33 @@
 <div class="container">
   <h3>Looks like you're new<br/> Seller here</h3>
 <h5>Sign up Seller with your details <br/>to get started</h5>
-  <form #sellerSignupForm="ngForm" (ngSubmit)="sellerSignup(sellerSignupForm)"><br/>
+  <form [formGroup]="sellerSignupForm" (ngSubmit)="Signup(sellerSignupForm)"><br/>
     <div>
       <label for="name" class="form-label">Enter Full Name :</label>
-      <input class="form-control" type="text" ngModel name="name" required/>
+      <input class="form-control" type="text" formControlName="name"  required/>
 
       <label for="email" class="form-label">Email Id :</label>
-      <input class="form-control" type="email" ngModel name="email" required/>
+      <input class="form-control" type="email" formControlName="email" required/>
 
       <label for="contact" class="form-label">Contact :</label>
-      <input class="form-control" type="contact" ngModel name="contact" required/>
+      <input class="form-control" type="contact" formControlName="contact" required/>
 
+   
       <label for="address" class="form-label">Address :</label>
-      <input class="form-control" type="address" ngModel name="address" required/><br/>
-      <label for="address" class="form-label">Address :</label>
-      <input class="form-control" type="address" ngModel name="address" required/><br/>
+      <input class="form-control" type="address" formControlName="address" required/><br/>
 
       <label for="company" class="form-label">Comapny :</label>
-      <input class="form-control" type="company" ngModel name="company" required/><br/>
+      <input class="form-control" type="company" formControlName="company" required/><br/>
 
  <label for="product" class="form-label">Product  :</label>
-      <input class="form-control" type="product" ngModel name="product" required/><br/>
-      
+      <input class="form-control" type="product" formControlName="product" required/><br/>
+
+      <label for="product" class="form-label">Password  :</label>
+      <input class="form-control" type="password" formControlName="password" required/><br/>
+
+      <label for="Confirmpassword" class="form-label"> Confirm Password  :</label>
+
+      <input class="form-control" type="password" formControlName="Confirmpassword" required/><br/>
 
     <button class="btn btn-warning form-control" type="submit"    [disabled]="!sellerSignupForm.valid"><b><u> SELLER SIGNUP</u></b></button>&nbsp;
     </div>

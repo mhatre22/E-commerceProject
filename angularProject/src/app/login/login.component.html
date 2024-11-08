@@ -2,14 +2,12 @@
 <h3>Login User<br/></h3>
 <h4>Get access to your Orders,</h4>
 <h4>Wishlist & Recommendation</h4>
-<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-  <label for="email"  class="form-label">Email ID:</label>
-  <input type="email" class="form-control" name="email" ngModel required/>
+<form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+  <label for="email"   class="form-label">Email ID:</label>
+  <input type="email" formControlName="email" class="form-control" name="email" />
   <label for="password" class="form-label">Password:</label>
-  <input type="password" class="form-control" name="password" ngModel required>
-  <label for="confirmpassword" class="form-label"> Confirm Password:</label>
-  <input type="password" class="form-control" name="confirmpassword" ngModel required>&nbsp;
+  <input type="password"formControlName="password" class="form-control" name="password" ><br/>
   <button type="submit" class="btn btn-warning form-control"><b><u> USER LOGIN</u></b></button>&nbsp;&nbsp;
-  <a class="new" (click)="gotoRegistraion()">New User Register ?</a><br/><br/>
+  <a class="new" (click)="gotoRegistraion()"><b><u>New User Register ?</u></b></a><br/><br/>
   </form>
 </div>

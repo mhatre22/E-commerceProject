@@ -2,25 +2,29 @@
 <div class="container">
   <h3>Looks like you're new<br/> User here</h3>
 <h5>Sign up User with your details <br/>to get started</h5>
-  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)"><br/>
+<a style="color: blue; font-size: large;" (click)="goTologin()"><b><u>Already Register User</u></b></a>
+  <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)"><br/>
     <div>
       <label for="name" class="form-label">Enter Full Name :</label>
-      <input class="form-control" type="text" ngModel name="name" required/>
+      <input class="form-control" type="text" formControlName="name" name="name" required/>
 
       <label for="email" class="form-label">Email Id :</label>
-      <input class="form-control" type="email" ngModel name="email" required/>
+      <input class="form-control" type="email" formControlName="email" name="email" name="email" required/>
 
       <label for="contact" class="form-label">Contact :</label>
-      <input class="form-control" type="contact" ngModel name="contact" required/>
+      <input class="form-control" type="contact" formControlName="contact" name="contact" required/>
 
       <label for="address" class="form-label">Address :</label>
-      <input class="form-control" type="address" ngModel name="address" required/><br/>
+      <input class="form-control" type="address" formControlName="address" name="address" required/><br/>
       
 
       <label for="password" class="form-label">Password :</label>
-      <input class="form-control" type="password" ngModel name="password" required/><br/>
+      <input class="form-control" type="password" formControlName="password" name="password" required/><br/>
 
-    <button class="btn btn-warning form-control" type="submit"    [disabled]="!registerForm.valid"><b><u> USER SIGNUP</u></b></button>&nbsp;
+      <label for="confirmpassword" class="form-label"> Confirm Password :</label>
+      <input class="form-control" type="password" formControlName="confirmpassword" name="confirmpassword" required/><br/>
+
+    <button class="btn btn-warning form-control" type="submit" [disabled]="!registerForm.valid"><b><u> USER SIGNUP</u></b></button>&nbsp;
     </div>
   </form>
 
