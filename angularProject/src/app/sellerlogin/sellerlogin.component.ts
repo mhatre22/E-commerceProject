@@ -29,14 +29,15 @@ this.loginForm = this.fb.group({
     this.logindata = lData.value
     this.ecommerce.getsellerData().
     subscribe(res=>{
-    const user = res.find((a :any)=>{
+    const seller = res.find((a :any)=>{
   return a.email ===  this.loginForm.value.email &&  a.password ===  this.loginForm.value.password
 });
 
-if (user){
+if (seller){
   this.toastr.success("SellerLogin SucessFully!!")
+  localStorage.setItem("seller",JSON.stringify({seller}));
   localStorage.setItem("islogIn","true")
-  this.router.navigate(['sellerhome'])
+  this.router.navigate(['sellerhome'],)
 }else{
   this.toastr.error("Seller Not Found ")
 localStorage.setItem("islogIn","false")

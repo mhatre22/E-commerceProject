@@ -63,6 +63,15 @@
       "contact": "7083089659",
       "password": "12345",
       "confirmpassword": "12345"
+    },
+    {
+      "id": "26c4",
+      "name": "sumeet deshmukh",
+      "email": "deshmukhsumeet08@gmail.com",
+      "address": "khopoli",
+      "contact": "9545484514",
+      "password": "123456",
+      "confirmpassword": "123456"
     }
   ]
 }

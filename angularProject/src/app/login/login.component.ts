@@ -13,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';  // Correct import
 export class LoginComponent implements OnInit {
   constructor(private router:Router,private ecommerce:EcommerceService,
     private fb:FormBuilder, private toastr: ToastrService){
-      localStorage.setItem("isLogin","false");
+      localStorage.setItem("isLogIn","false");
     }
   ngOnInit(): void {
   this.loginForm =this.fb.group({
@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
 
   loginData:any;
   login(lData:FormGroup){
-    console.log(lData.value)
-    this.loginData =lData.value
+    console.log(lData);
+    this.loginData = lData.value
     this.ecommerce.getlogindata()
     .subscribe(res=>{
     const user = res.find((a :any)=>{
@@ -35,14 +35,16 @@ export class LoginComponent implements OnInit {
     });
 
     if (user){
-    this.toastr.success("UserLogin Suceesfully!!")
-    localStorage.setItem("isLogin","true")
-      this.router.navigate(['/userhome']);
+    this.toastr.success("UserLogin Suceesfully!!");
+    localStorage.setItem("user",JSON.stringify({user}));
+    localStorage.setItem("isLogIn","true")
+    this.router.navigate(['/userhome']);
     }else{
-     this.toastr.error("User Not Found!!")
-     localStorage.setItem("isLogin","false")
+     this.toastr.error("User Not Found!!");
+     localStorage.setItem("isLogIn","false");
     }
     });
+    
 
   }
   gotoRegistraion(){
