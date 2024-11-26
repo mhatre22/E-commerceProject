@@ -2,6 +2,7 @@
 <div class="container">
   <h3>Looks like you're new<br/> Seller here</h3>
 <h5>Sign up Seller with your details <br/>to get started</h5>
+<a style="color: blue; font-size: large;" (click)="goTosellerlogin()"><b><u>Already Register Seller</u></b></a>
   <form [formGroup]="sellerSignupForm" (ngSubmit)="Signup(sellerSignupForm)"><br/>
     <div>
       <label for="name" class="form-label">Enter Full Name :</label>

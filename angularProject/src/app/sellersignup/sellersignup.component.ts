@@ -45,5 +45,8 @@ export class SellersignupComponent implements OnInit {
 
   );
   }
+  goTosellerlogin(){
+    this.router.navigate(['sellerlogin'])
+  }
   }
 
