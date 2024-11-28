@@ -14,6 +14,8 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import{sellerauthGuard} from './sellerauth.guard'
 import { UserhomeComponent } from './userhome/userhome.component';
 import { userauthGuard } from './userauth.guard';
+import { MobilesComponent } from './mobiles/mobiles.component';
+import { MobilehomeComponent } from './mobilehome/mobilehome.component';
 const routes: Routes = [
   {
     path: 'login',component:LoginComponent
@@ -32,7 +34,9 @@ const routes: Routes = [
   {path:'sellersignup',component:SellersignupComponent},
   {path:'sellerlogin',component:SellerloginComponent},
   {path:'sellerhome',component:SellerhomeComponent,canActivate:[sellerauthGuard]},
-  {path: 'userhome',component:UserhomeComponent,canActivate:[userauthGuard]}
+  {path: 'userhome',component:UserhomeComponent,canActivate:[userauthGuard]},
+  {path:'mobiles',component:MobilesComponent},
+  {path:'mobilehome',component:MobilehomeComponent}
 
 
 ];

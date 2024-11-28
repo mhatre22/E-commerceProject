@@ -20,6 +20,12 @@ import{HttpClientModule} from '@angular/common/http'
 import { provideToastr, ToastrModule } from 'ngx-toastr';  
 import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { UserhomeComponent } from './userhome/userhome.component';
+import { MobilesComponent } from './mobiles/mobiles.component';
+import { MobilehomeComponent } from './mobilehome/mobilehome.component';
+
+import { MenfashionComponent } from './menfashion/menfashion.component';
+import { KidfashionComponent } from './kidfashion/kidfashion.component';
+import { WomenfashionComponent } from './womenfashion/womenfashion.component';
 
 
 
@@ -40,6 +46,11 @@ import { UserhomeComponent } from './userhome/userhome.component';
     SellerloginComponent,
     SellerhomeComponent,
     UserhomeComponent,
+    MobilesComponent,
+    MobilehomeComponent,
+    MenfashionComponent,
+    KidfashionComponent,
+    WomenfashionComponent,
 
 
   ],

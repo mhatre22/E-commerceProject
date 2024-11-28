@@ -6,14 +6,20 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent{
+export class HomeComponent implements OnInit{
 
   constructor(private router: Router) { }
+  ngOnInit(): void {
+  
+  }
 
-  goToLogin(): void {
+  goToLogin(){
     this.router.navigateByUrl('/login')
   }
-  gotoGrocery():void{
+  gotoGrocery(){
     this.router.navigateByUrl('/grocery')
+  }
+  gotoMobiles(){
+    this.router.navigateByUrl('/mobiles')
   }
 }

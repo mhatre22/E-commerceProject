@@ -1,0 +1,47 @@
+.padding{
+    padding-left:12px ;
+    display: inline-flex;
+   margin-top: 8px;
+ 
+}
+.staples-group{
+    display: inline-flex;
+    padding-right: 120px;
+    text-align: center;
+
+}
+.card1{
+    padding-right:10px;
+    
+    
+}
+
+p{
+    color: #5a5757;
+
+
+  
+}
+.card{
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 5px;
+    padding-right: 10px;
+    width: 100%;
+    border: transparent;
+    position: sticky;
+   
+}
+span{
+    color: #000;
+}
+h6{
+    margin-top: 8px;
+}
+.btn{
+    border-radius: 20px;
+    font-size: small;
+}
+img{
+    align-items: center;
+}

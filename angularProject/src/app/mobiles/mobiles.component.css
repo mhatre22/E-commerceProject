@@ -1,0 +1,46 @@
+.staples-group{
+    display: inline-flex;
+    padding-left: 50px;
+    text-align: center;
+
+}
+h4{
+    padding-left: 20px;
+}
+.top-n{
+    margin-top: 20px;
+    padding-left: 20px;
+  
+}
+h6{
+    padding-left:20px ;
+}
+li,ul{
+    list-style: none;
+    display: inline flex;
+    font-size: 14px;
+    padding-left: 10px;
+   
+}
+li{
+    color: rgb(83, 145, 245);
+}
+
+p{
+    font-size: small;
+padding-left: 20px;
+padding-right: 20px;
+}
+.topimg{
+    margin-top: -15px;
+}
+.padding{
+    padding-left:12px ;
+    display: inline-flex;
+   margin-top: 8px;
+ 
+}
+
+.homepage{
+    display: inline;
+}
