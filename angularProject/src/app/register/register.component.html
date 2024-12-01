@@ -5,8 +5,8 @@
 <a style="color: blue; font-size: large;" (click)="goTologin()"><b><u>Already Register User</u></b></a>
   <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)"><br/>
     <div>
-      <label for="name" class="form-label">Enter Full Name :</label>
-      <input class="form-control" type="text" formControlName="name" name="name" required/>
+      <label for="userName" class="form-label">Enter Full Name :</label>
+      <input class="form-control" type="text" formControlName="name" name="userName" required/>
 
       <label for="email" class="form-label">Email Id :</label>
       <input class="form-control" type="email" formControlName="email" name="email" name="email" required/>

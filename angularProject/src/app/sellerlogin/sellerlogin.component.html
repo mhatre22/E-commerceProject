@@ -2,6 +2,8 @@
     <h3> Seller Login<br/></h3>
     <h4>Explore our product recommendations with<br/> Dhamaka Selection</h4>&nbsp;
     <form [formGroup]="loginForm" (ngSubmit)="Login(loginForm)">
+      <label for="username" class="form-label">Username :</label>
+      <input class="form-control" type="text" formControlName="username"/>
       <label for="email"  class="form-label">Email ID:</label>
       <input type="email" class="form-control"formControlName="email"/>
       <label for="password" class="form-label">Password:</label>

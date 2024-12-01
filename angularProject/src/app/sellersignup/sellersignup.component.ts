@@ -18,7 +18,7 @@ export class SellersignupComponent implements OnInit {
   
   ngOnInit(): void {
     this.sellerSignupForm =this.fb.group({
-      name :[''],
+      username:[''],
       email:[''],
       contact:[''],
       address: [''],
@@ -31,9 +31,9 @@ export class SellersignupComponent implements OnInit {
   sellerSignupForm :FormGroup|any;
   Signupdata:any;
   Signup(Signupdata:FormGroup){
-    console.log(Signupdata)
+    console.log(Signupdata.value)
     this.sellerSignupdata = Signupdata.value
-    this.ecommerce.postsellerdata(this.sellerSignupdata).subscribe((data)=>{
+    this.ecommerce.postsellerData(this.sellerSignupdata).subscribe((data)=>{
       console.log(data)
       localStorage.setItem("isSignup","true")
       this.toster.success("Seller-Signup SucessFully!!")
@@ -44,7 +44,7 @@ export class SellersignupComponent implements OnInit {
     }
 
   );
-  }
+}
   goTosellerlogin(){
     this.router.navigate(['sellerlogin'])
   }

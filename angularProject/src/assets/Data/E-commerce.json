@@ -2,7 +2,7 @@
   "sellerData": [
     {
       "id": "eefc",
-      "name": "Snehal Mhatre",
+      "username": "Snehal Mhatre",
       "email": "mhatresnehal75@gmail.com",
       "contact": "7083089659",
       "address": "pen-Raigad",
@@ -12,21 +12,10 @@
       "Confirmpassword": "12345"
     },
     {
-      "id": "b2a1",
-      "name": "aaaa",
-      "email": "apumhatre2325@gmail.com",
-      "contact": "7083089659",
-      "address": "pen-Raigad",
-      "company": "confianza PTV LMD",
-      "product": "Mobile",
-      "password": "12345",
-      "Confirmpassword": "12345"
-    },
-    {
-      "id": "7a9c",
-      "name": "Snehal Mhatre",
-      "email": "mhatresnehal75@gmail.com",
-      "contact": "7083089659",
+      "id": "acf9",
+      "username": "Apeksha Patil",
+      "email": "apu@gmail.com",
+      "contact": "9545484514",
       "address": "pen-Raigad",
       "company": "confianza PTV LMD",
       "product": "Mobile",
@@ -34,21 +23,32 @@
       "Confirmpassword": "456"
     },
     {
-      "id": "89dc",
-      "name": "aaaa",
-      "email": "apumhatre2325@gmail.com",
+      "id": "b4f9",
+      "username": "sumeet deshmukh",
+      "email": "deshmukhsumeet08@gmail.com",
+      "contact": "9545484514",
+      "address": "khopoli",
+      "company": "confianza PTV LMD",
+      "product": "Mobile",
+      "password": "123",
+      "Confirmpassword": "123"
+    },
+    {
+      "id": "717e",
+      "username": "sita mhatre",
+      "email": "sita@gmail.com",
       "contact": "7083089659",
       "address": "pen-Raigad",
       "company": "confianza PTV LMD",
       "product": "Mobile",
-      "password": "12345",
-      "Confirmpassword": "12345"
+      "password": "111",
+      "Confirmpassword": "111"
     }
   ],
   "userData": [
     {
       "id": "051c",
-      "name": "Snehal Mhatre",
+      "userName": "Snehal Mhatre",
       "email": "mhatresnehal75@gmail.com",
       "address": "pen-Raigad",
       "contact": "7083089659",
@@ -57,21 +57,30 @@
     },
     {
       "id": "b34a",
-      "name": "Snehal Mhatre",
+      "userName": "Snehal Mhatre",
       "email": "mhatresnehal75@gmail.com",
       "address": "pen-Raigad",
       "contact": "7083089659",
       "password": "12345",
       "confirmpassword": "12345"
+    }
+  ],
+  "product": [
+    {
+      "id": "482d",
+      "productName": "Rice",
+      "category": "Grocery",
+      "price": "55₹",
+      "description": "Primmum Rice, rich and good Quality Product",
+      "image": "https://wallpaperaccess.com/full/1463517.jpg"
     },
     {
-      "id": "26c4",
-      "name": "sumeet deshmukh",
-      "email": "deshmukhsumeet08@gmail.com",
-      "address": "khopoli",
-      "contact": "9545484514",
-      "password": "123456",
-      "confirmpassword": "123456"
+      "id": "d89f",
+      "productName": "Mobile",
+      "category": "Electronic",
+      "price": "60000₹",
+      "description": "An Apple phone. Smart device and user Friendly",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6505/6505109_sd.jpg"
     }
   ]
 }

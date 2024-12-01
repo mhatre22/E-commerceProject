@@ -16,6 +16,8 @@ import { UserhomeComponent } from './userhome/userhome.component';
 import { userauthGuard } from './userauth.guard';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { MobilehomeComponent } from './mobilehome/mobilehome.component';
+import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
+import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 const routes: Routes = [
   {
     path: 'login',component:LoginComponent
@@ -36,7 +38,9 @@ const routes: Routes = [
   {path:'sellerhome',component:SellerhomeComponent,canActivate:[sellerauthGuard]},
   {path: 'userhome',component:UserhomeComponent,canActivate:[userauthGuard]},
   {path:'mobiles',component:MobilesComponent},
-  {path:'mobilehome',component:MobilehomeComponent}
+  {path:'mobilehome',component:MobilehomeComponent},
+  {path:'sellerproductlist',component:SellerproductlistComponent},
+  {path:'selleraddproduct',component:SelleraddproductComponent}
 
 
 ];

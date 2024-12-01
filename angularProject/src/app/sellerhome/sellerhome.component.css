@@ -3,15 +3,43 @@
     color: blue;
     justify-content: space-between;
     text-align: center;
-    padding-left: 800px;
+    padding-left: 750px;
 }
 li,ul{
     list-style: none;
     text-decoration: none;
     display: inline-flex;
-    column-gap: 5px;
+    column-gap: 2.5px;
 }
 h3{
     color: rgb(87, 87, 237);
+    text-align: center;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+.card{
+    height: 100%px;
+    width:100%px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+table{
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+td{
+    color: blueviolet;
+ text-align: center;
+}
+table td,table th{
+    border: 1px solid gainsboro;
+    padding: 5px;
+}
+th{
     text-align: center;
 }

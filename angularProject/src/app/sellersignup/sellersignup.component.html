@@ -5,21 +5,21 @@
 <a style="color: blue; font-size: large;" (click)="goTosellerlogin()"><b><u>Already Register Seller</u></b></a>
   <form [formGroup]="sellerSignupForm" (ngSubmit)="Signup(sellerSignupForm)"><br/>
     <div>
-      <label for="name" class="form-label">Enter Full Name :</label>
-      <input class="form-control" type="text" formControlName="name"  required/>
+      <label for="username" class="form-label">Username :</label>
+      <input class="form-control" type="text" formControlName="username"  required/>
 
       <label for="email" class="form-label">Email Id :</label>
       <input class="form-control" type="email" formControlName="email" required/>
 
       <label for="contact" class="form-label">Contact :</label>
-      <input class="form-control" type="contact" formControlName="contact" required/>
+      <input class="form-control" type="tel" formControlName="contact" required/>
 
    
       <label for="address" class="form-label">Address :</label>
-      <input class="form-control" type="address" formControlName="address" required/><br/>
+      <input class="form-control" type="text" formControlName="address" required/><br/>
 
       <label for="company" class="form-label">Comapny :</label>
-      <input class="form-control" type="company" formControlName="company" required/><br/>
+      <input class="form-control" type="text" formControlName="company" required/><br/>
 
  <label for="product" class="form-label">Product  :</label>
       <input class="form-control" type="product" formControlName="product" required/><br/>

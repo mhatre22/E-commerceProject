@@ -26,6 +26,10 @@ import { MobilehomeComponent } from './mobilehome/mobilehome.component';
 import { MenfashionComponent } from './menfashion/menfashion.component';
 import { KidfashionComponent } from './kidfashion/kidfashion.component';
 import { WomenfashionComponent } from './womenfashion/womenfashion.component';
+import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
+import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
+import { EcommerceService } from 'src/assets/Services/ecommerce.service';
+
 
 
 
@@ -51,13 +55,16 @@ import { WomenfashionComponent } from './womenfashion/womenfashion.component';
     MenfashionComponent,
     KidfashionComponent,
     WomenfashionComponent,
+    SellerproductlistComponent,
+    SelleraddproductComponent,
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-  FormsModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -66,8 +73,10 @@ import { WomenfashionComponent } from './womenfashion/womenfashion.component';
   ],
   providers: [
     provideAnimations(),
-    provideToastr()
+    provideToastr(),
+   
   ] ,
+
   bootstrap: [AppComponent]
 
 })

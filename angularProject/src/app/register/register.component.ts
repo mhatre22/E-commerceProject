@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit{
     private toastr: ToastrService){}
   ngOnInit(): void {
     this.registerForm = this.fb.group ({
-      name: [''],
+      userName: [''],
       email:[''],
       address:[''],
       contact:[''],
