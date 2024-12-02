@@ -1,0 +1,15 @@
+<br/>
+
+<br/>
+<h4> Update Product</h4>&nbsp;
+<div class="container1">
+<form [formGroup]="updateProductForm" (ngSubmit)="updateProduct(updateProductForm)">
+<input class="form-input" type="text" name="productName" placeholder="Enter Product Name" required formControlName="productName"><br/><br/>
+<input class="form-input" type="text" name="category" placeholder="Enter  Product Category"  required formControlName="category"><br/><br/>
+<input class="form-input" type="text" name="price" placeholder="Enter Product Price" required  formControlName="price"><br/><br/>
+<textarea class="form-input" type="text" name="description" placeholder="Enter Product Description"   required  formControlName="description">
+</textarea><br/><br/>
+<input class="form-input" type="text" name="image" placeholder="Enter Product Image URL"  required formControlName="image"><br/><br/>
+<button type="submit" [disabled]=!updateProductForm.valid class="btn btn-warning input">Update Product</button>
+</form>
+</div>

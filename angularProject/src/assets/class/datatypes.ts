@@ -10,7 +10,7 @@ password:string
 
 }
 export interface product{
-    id:string,
+    id:number,
     productName:string,
     category:string,
     price:number,

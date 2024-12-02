@@ -1,6 +1,6 @@
 <div class="container">
    <br/>
-   <h3><u>Seller Product List</u></h3><br/>
+   <h3>Seller Product List</h3><br/>
 <table>
    <thead>
    <tr>
@@ -23,8 +23,8 @@
          <td>{{item.category}}</td>
          <td>{{item.price}}</td>
          <td>{{item.description}}</td>
-         <td><button  class="btn btn-success"><u>Update</u></button></td>
-         <td><button class="btn btn-danger"><u>Delete</u></button></td>
+         <td><button (click)="updateProduct(item.id)" class="btn btn-success"><u>Update</u></button></td>
+         <td><button  (click)="deleteProduct(item.id)"  class="btn btn-danger"><u>Delete</u></button></td>
       
          
       </tr>

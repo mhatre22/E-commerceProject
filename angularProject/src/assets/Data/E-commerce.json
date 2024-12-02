@@ -67,20 +67,20 @@
   ],
   "product": [
     {
-      "id": "482d",
-      "productName": "Rice",
-      "category": "Grocery",
-      "price": "55₹",
-      "description": "Primmum Rice, rich and good Quality Product",
-      "image": "https://wallpaperaccess.com/full/1463517.jpg"
-    },
-    {
       "id": "d89f",
       "productName": "Mobile",
       "category": "Electronic",
-      "price": "60000₹",
-      "description": "An Apple phone. Smart device and user Friendly",
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6505/6505109_sd.jpg"
+      "price": "75000",
+      "description": "An apple phone user friendly touch",
+      "image": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-Max.jpg"
+    },
+    {
+      "id": "c6ea",
+      "productName": "LCD",
+      "category": "Electronic",
+      "price": "35000",
+      "description": "5Star...Smart TV and good Product",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.vAfHjjqZlJOvtLuD6QzTvQHaHa&pid=Api&P=0&h=180"
     }
   ]
 }

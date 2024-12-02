@@ -29,6 +29,7 @@ import { WomenfashionComponent } from './womenfashion/womenfashion.component';
 import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 import { EcommerceService } from 'src/assets/Services/ecommerce.service';
+import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
 
 
 
@@ -57,6 +58,7 @@ import { EcommerceService } from 'src/assets/Services/ecommerce.service';
     WomenfashionComponent,
     SellerproductlistComponent,
     SelleraddproductComponent,
+    SellerupdateProductComponent,
 
 
 
