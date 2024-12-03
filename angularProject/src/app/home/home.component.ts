@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { product } from 'src/assets/class/datatypes';
+import { ProductService } from 'src/assets/Services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-
-  constructor(private router: Router) { }
+popularProduct :undefined | product[]
+  constructor(private router: Router,private product:ProductService) { }
   ngOnInit(): void {
-  
+  this.product.popularPro().subscribe((data)=>{
+    console.log(data);
+    this.popularProduct = data;
+  })
   }
 
   goToLogin(){
     this.router.navigateByUrl('/login')
   }
-  gotoGrocery(){
-    this.router.navigateByUrl('/grocery')
-  }
-  gotoMobiles(){
-    this.router.navigateByUrl('/mobiles')
-  }
+  
 }

@@ -5,7 +5,7 @@ let _router=inject(Router)
   let islogInid = localStorage.getItem("islogIn");
   if(islogInid =="false"){
     alert("Seller please Login ")
-    _router.navigate(['/sellerlogin'])
+    _router.navigate([''])
     return false;
 
   }

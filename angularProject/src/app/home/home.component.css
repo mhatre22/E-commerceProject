@@ -127,3 +127,26 @@ a {
     text-decoration: none;
     font-weight: 500;
 }
+.images{
+    height: 150px;
+    width: 150px;
+
+
+   
+}
+.contain{
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+ 
+}
+p{
+    text-align: center;
+}
+.card{
+    align-items: center;
+    flex-direction: column;  /* Arrange the items vertically */
+    gap: 20px;
+    padding: 20px;
+}

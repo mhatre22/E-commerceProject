@@ -10,8 +10,6 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component';
  import{sellerauthGuard} from './sellerauth.guard'
 import { UserhomeComponent } from './userhome/userhome.component';
 import { userauthGuard } from './userauth.guard';
-import { MobilesComponent } from './mobiles/mobiles.component';
-import { MobilehomeComponent } from './mobilehome/mobilehome.component';
 import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
@@ -28,8 +26,6 @@ const routes: Routes = [
   {path:'sellerlogin',component:SellerloginComponent},
   {path:'sellerhome',component:SellerhomeComponent,canActivate:[sellerauthGuard]},
   {path:'userhome',component:UserhomeComponent,canActivate:[userauthGuard]},
-  {path:'mobiles',component:MobilesComponent},
-  {path:'mobilehome',component:MobilehomeComponent},
   {path:'sellerproductlist',component:SellerproductlistComponent,canActivate:[sellerauthGuard]},
   {path:'selleraddproduct',component:SelleraddproductComponent,canActivate:[sellerauthGuard]},
   {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]}

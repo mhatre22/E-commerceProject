@@ -68,19 +68,115 @@
   "product": [
     {
       "id": "d89f",
-      "productName": "Mobile",
-      "category": "Electronic",
-      "price": "75000",
-      "description": "An apple phone user friendly touch",
+      "productName": "iphone",
+      "category": "Mobile",
+      "price": "75000₹",
+      "description": "15.40 cm (6.1-inch) Super Retina XDR display Advanced camera system for better photos in any light Cinematic mode now in 4K Dolby Vision up to 30 fps",
       "image": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-Max.jpg"
     },
     {
       "id": "c6ea",
       "productName": "LCD",
       "category": "Electronic",
-      "price": "35000",
-      "description": "5Star...Smart TV and good Product",
+      "price": "35000₹",
+      "description": "Acer 80 cm (32 inches) I Pro Series HD Ready Smart LED Google TV AR32HDIGU2841AT (Black)",
       "image": "https://tse1.mm.bing.net/th?id=OIP.vAfHjjqZlJOvtLuD6QzTvQHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "4882",
+      "productName": "Bluetooth Speaker",
+      "category": "Electronic",
+      "price": "1500₹",
+      "description": "Sony [New Srs-Xb100 Wireless Bluetooth Portable Lightweight Super-Compact Travel Speaker,Extra-Durable",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.7E43LBQjv9R-oiUHp0oQ0wHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "01ed",
+      "productName": "Bluetooth Wireless",
+      "category": "Electronic",
+      "price": "3500₹",
+      "description": "boAt Airdrops 138 TWS Earbuds ( Voice Assistant Supported, Viper Green",
+      "image": "https://media.croma.com/image/upload/v1661267309/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/259330_zsth0b.png"
+    },
+    {
+      "id": "fb02",
+      "productName": "Electric-Mountain-Bike",
+      "category": "Electronic Cycle",
+      "price": "15000₹",
+      "description": "linen 500W 20\" Folding Electric Bike for Adults, Full Suspension Foldable Ebike with 5 Riding Modes, 48V 7.8Ah Battery,",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.ba5LCNZplvB9UbVjqSkshAHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "2469",
+      "productName": "Samsung Galaxy S24 ",
+      "category": "Mobile",
+      "price": "80000₹",
+      "description": "Samsung Galaxy S23 Ultra 5G 256GB 8GB Verde Samsung Samsung Galaxy S23 Samsung Galaxy S23 Ultra 5G",
+      "image": "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/cf05c8fd-9177-4f88-a194-7a5f660bed7f.0ab64f758e0eb6af421e43bcb4682ea8.png?odnHeight=2000&odnWidth=2000&odnBg=ffffff"
+    },
+    {
+      "id": "e6c8",
+      "productName": "Dumbbell Rods",
+      "category": "Gym Equipments",
+      "price": "₹3,129",
+      "description": "Amazon Brand - Symactive PVC 100 Kg Home Gym Set with One 4 Ft Plain + One 3 Ft Curl Rod and One Pair Dumbbell Rods, Multicolour",
+      "image": "https://i5.walmartimages.com/asr/75ae21d3-ead7-4a68-979d-2b0c9de7798f_1.6ab88a815ab050cc20cde22926432327.jpeg"
+    },
+    {
+      "id": "0a51",
+      "productName": "    Apple Apple MacBook ",
+      "category": "Laptops",
+      "price": "120000₹",
+      "description": "Apple MacBook Pro 15-Inch Retina Laptop i7 2.5GHz - 3.7GHz / 16GB DDR3 Ram / 2TB SSD / Radeon R9 M370X 2GB Video / OS X Mojave / Thunderbolt / HDMI / MJLT2LL/A",
+      "image": "https://i5.walmartimages.com/seo/Apple-MacBook-Pro-15-Inch-Retina-Laptop-i7-2-5GHz-3-7GHz-16GB-DDR3-Ram-2TB-SSD-Radeon-R9-M370X-2GB-Video-OS-X-Mojave-Thunderbolt-HDMI-MJLT2LL-A-Grade_504e16f2-b29b-4978-b6ff-be389f3b2887_1.ded2f448229eeac679f0c97e491570bc.jpeg"
+    },
+    {
+      "id": "949a",
+      "productName": " Fastrack FR1 Smartwatch",
+      "category": "Smart Watch",
+      "price": "₹1,999",
+      "description": "Bluetooth 5.2\nBluetooth Calling\n1.39 inches Touch Display\nWater Resistant, 1.5 m\nDust Proof\nHeart Rate Monitor\nSpO2 (Blood Oxygen) Monitor\nPedometer, Sleep Monitor, Calorie Count, Step Count",
+      "image": "https://cdn1.smartprix.com/rx-iiXaQHa6a-w1200-h1200/iXaQHa6a.jpg"
+    },
+    {
+      "id": "720d",
+      "productName": "Bold-fit Jacket",
+      "category": "Winter Men's jacket",
+      "price": "₹1,799",
+      "description": "Boldfit Jacket For Men Winter Wear Puffer Jacket For Men Monsoon Winter Wear for men Men Hooded Winter Jackets For Men",
+      "image": "https://ae01.alicdn.com/kf/HTB111ooXinrK1RjSsziq6xptpXaF/Jacket-Men-2018-Autumn-Winter-Military-Clothing-Pocket-Zipper-Outwear-Men-s-Warm-Jacket-Large-size.jpg"
+    },
+    {
+      "id": "8167",
+      "productName": " Straight Kurta",
+      "category": "Teal Flora Print Women Kurta",
+      "price": "₹800",
+      "description": "Cotton Blend Floral Print Straight Kurta in Mandarin",
+      "image": "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/2086105/2017/9/4/11504510267899-Alom-Women-Kurtas-1041504510267616-1.jpg"
+    },
+    {
+      "id": "b441",
+      "productName": "Jam & Honey Teddy Bear,",
+      "category": " Cute, Soft Toy (33 Cm, Pink), Great Birthday Gift",
+      "price": "₹279",
+      "description": "\nMade from soft, non-toxic and anti-allergic polyester fabric;Extremely huggable soft toy with conjugate fibre-filled stuffing",
+      "image": "https://image.pushauction.com/0/0/faef8218-dbb6-4683-afbe-476b586d7b19/158ff0d8-5752-4fd5-88e8-26f76ae1d75c.jpg"
+    },
+    {
+      "id": "7c88",
+      "productName": "Learning Resources Mental Box  Thinking Game",
+      "category": "Activity Games",
+      "price": "540₹",
+      "description": "Stack, pattern and match the multicolor shapes, but don’t be fooled by these endlessly enjoyable blocks mean brain-boosting business",
+      "image": "https://spgfan.com/wp-content/uploads/2021/11/Logic.7.jpg"
+    },
+    {
+      "id": "14d8",
+      "productName": "The World of David Walliams ",
+      "category": " Set Ever 5 Books",
+      "price": "1,625.23₹",
+      "description": "The World of David Walliams Best Box Set Ever 5 Books - Ages 7-9 - Paperback is quite the title!",
+      "image": "https://cdn.shopify.com/s/files/1/0024/6874/1219/products/B2D0066WorldOfDavidWalliams5BooksSlipcase-Front_2800x2800.jpg?v=1625481078"
     }
   ]
 }

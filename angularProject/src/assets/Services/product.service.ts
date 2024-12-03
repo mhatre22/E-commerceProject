@@ -9,9 +9,12 @@ export class ProductService {
 
   constructor(private http:HttpClient) { }
   getProductId(id: any){
-    return this.http.get(`http://localhost:3000/product/${id}`)
+    return this.http.get(`http://localhost:3000/product/${id}`);
   }
   getupdate(body:any,id:any){
-    return this.http.put<product>('http://localhost:3000/product/'+id,body)
+    return this.http.put<product>('http://localhost:3000/product/'+id,body);
+  }
+  popularPro(){
+    return this.http.get<product[]>('http://localhost:3000/product?_limit=8');
   }
 }

@@ -5,11 +5,11 @@
             <div class="container text-center center">
                 <div class="row row-cols-auto center">
                     <div class="col">
-                        <a (click)="gotoGrocery()"><img src="\assets\E-commerce Project images\grocery.jpg" height="90"
+                        <a><img src="\assets\E-commerce Project images\grocery.jpg" height="90"
                                 width=90></a> <br />Grocery
                     </div>
                     <div class="col">
-                  <a (click)="gotoMobiles()"><img src="\assets\E-commerce Project images\mobile.jpg" height="90" width=90></a><br />Mobiles
+                  <a ><img src="\assets\E-commerce Project images\mobile.jpg" height="90" width=90></a><br />Mobiles
                     </div>
                     <div class="col"><img src="\assets\E-commerce Project images\fashion0.jpg" height="90"
                             width=90><br />Fashion</div>
@@ -53,144 +53,26 @@
                     height="180px" width="1000px" />
             </div>
         </div>
-    </div>
-    <div class="box">
-        <div class="cardcenter">
-            <div class="card" style="width: 1000px;">
-                <div class="card-body center">
-                    <p class="font">Best of Electronics</p>
-                    <div class="container text-center center">
-                        <div class="row row-cols-auto center">
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\bootheadset.webp"
-                                        height="135" width=110><br />Best TrueWireless...<br /><b>Grab Now</b></div>
-                            </div>
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\monitor.png" height="135"
-                                        width=110><br />Monitors<br /><b>From ₹7949</b></div>
-                            </div>
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\sony_speaker.jpg"
-                                        height="135" width=110><br />Best Selling Mobile...<br /><b>From ₹449*</b>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\Fastrack-Watch.jpg"
-                                        height="135" width=110><br />Fastrack SmartWatch...<br /><b>From ₹1,349</b>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\asus-monitor.webp"
-                                        height="135" width=110><br /> ASUS Monitors<br /><b>From ₹14999</b></div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\printer.jpg" height="135"
-                                        width=110><br />Printers<br /><b>From ₹7949</b></div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    </div><br/>
+   <div class="contain"><br/>
+    <div  class="row" *ngIf="popularProduct">
+        <div class="col-sm-3" *ngFor="let item of popularProduct">
+     <div>
+        <div class="card">
+         <img  class="images" src="{{item.image}}">
+         <p>{{item.productName}}</p>
+          </div>
+          
+     </div>
+     
+      
+        
         </div>
     </div>
 
-
-    <!------------------------------------------------------------------------------------->
-    <div class="box">
-        <div class="cardcenter">
-            <div class="card" style="width: 1000px;">
-                <div class="card-body center">
-                    <p class="font">Beauty,Food,Toy & More</p>
-                    <div class="container text-center center">
-                        <div class="row row-cols-auto center">
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\electric-cycle.jpg"
-                                        height="135" width=110><br />Electric Cycle<br /><b>Up to 40% Off</b></div>
-                            </div>
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\remote-toy.webp"
-                                        height="135" width=110><br />Remote Control Toys<br /><b>Up to 80% Off</b>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\soft-toy.jpg" height="135"
-                                        width=130><br />Soft Toys<br /><b>Up to 70% Off</b></div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\action-toy.jpg"
-                                        height="135" width=110><br />Best of Action Toys<br /><b>Up to 80% Off</b>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\food.jpg" height="135"
-                                        width=110><br /> Dry Fruits<br /><b>Up to 75% Off</b></div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\instrument.avif"
-                                        height="135" width=110><br />String Instrument<br /><b>Up to 70% Off</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!------------------------------------------------------------------------->
-
-    <div class="box">
-        <div class="cardcenter">
-            <div class="card" style="width: 1000px;">
-                <div class="card-body center">
-                    <p class="font">Beauty,Food,Toy & More</p>
-                    <div class="container text-center center">
-                        <div class="row row-cols-auto center">
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\microphone.jpg"
-                                        height="135" width=110><br />Microphones<br /><b>Up to 70% Off</b></div>
-                            </div>
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\puzzle.jpg" height="135"
-                                        width=110><br />Puzzles & Cubes<br /><b>From ₹ 79</b></div>
-                            </div>
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\oats.avif" height="135"
-                                        width=130><br />Breakfast Cereal<br /><b>Up to 75% Off</b></div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\butter.webp" height="135"
-                                        width=110><br />Food Spreads<br /><b>Up to 75% Off</b></div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\musical-toy.jpg"
-                                        height="135" width=110><br /> Musical Toys<br /><b>Under 199</b></div>
-                            </div>
-
-                            <div class="card">
-                                <div class="col"><img src="\assets\E-commerce Project images\book.png" height="135"
-                                        width=110><br />Learning & Education<br /><b>Up to 80% Off</b></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+   </div>
 </main>
-
-<div class="content"><br />
+<div class="content">
     <h5><b>Top Stories : Brand Directory</b></h5>
     <h6>MOST SEARCHED FOR ON EASYBUY :</h6>
     <small>
