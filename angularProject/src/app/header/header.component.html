@@ -1,16 +1,22 @@
 <div class="bg">
-    <header>
+<header>
         <nav class="navbar bg-body-tertiary postion">
             <div class="container-fluid">
                 <img src="\assets\E-commerce Project images\navbar.png" height="50px" width="300px" />
-                <form class="d-flex" role="search">&nbsp;&nbsp;
-                    <div>
-                        <input class="form-control me-2 search" type="search"
-                            placeholder="Search for Products,Brand and More" aria-label="Search" />
-                    </div>
+                <form class="d-flex" role="search">
+                        <input [formControl]="searchControl" (keyup)="onKeyUp($event)"
+                        #usernameInput type="text" (blur)="hideInput()" class="form-control me-2 search"
+                            placeholder="Search for Products,Brand and More" id="productBar"
+                             aria-label="Search"/>
+                        
+                            <ul class="suggest-result li" *ngIf="productSeach">
+                                <li *ngFor="let product of productSeach">
+                        <a> {{ product.productName }}</a>
+                                </li>
+                              </ul>
                     &nbsp;&nbsp;<br/>         
                     <div class="btn-class">
-
+                        <button (click)="submitSearch(usernameInput.value)" class="btn btn-light"><i class="bi bi-search"></i></button>
                        <button (click)="goToLogin()"class=" btn btn-light">Login&nbsp;<i class="bi bi-person-circle"></i></button>
                         <button type="button" class="btn btn-light"> <i class="bi bi-cart"></i>(0)</button>&nbsp;
                         <button (click)="goTosellerLogin()" type="button" class="btn btn-light"> <i class="bi bi-shop"></i></button>&nbsp;
@@ -21,3 +27,4 @@
         </nav>
     </header>
     <br/><br/>
+  

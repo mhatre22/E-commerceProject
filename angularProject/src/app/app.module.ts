@@ -19,6 +19,9 @@ import { UserhomeComponent } from './userhome/userhome.component';
 import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
+import { NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+
+import { SerachproductComponent } from './serachproduct/serachproduct.component';
 
 
 
@@ -40,6 +43,8 @@ import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdat
     SelleraddproductComponent,
     SellerupdateProductComponent,
 
+    SerachproductComponent,
+
 
 
   ],
@@ -47,6 +52,7 @@ import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdat
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgbCarouselModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,

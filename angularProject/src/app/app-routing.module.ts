@@ -13,6 +13,7 @@ import { userauthGuard } from './userauth.guard';
 import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
+import { SerachproductComponent } from './serachproduct/serachproduct.component';
 const routes: Routes = [
   {
     path: 'login',component:LoginComponent
@@ -28,8 +29,8 @@ const routes: Routes = [
   {path:'userhome',component:UserhomeComponent,canActivate:[userauthGuard]},
   {path:'sellerproductlist',component:SellerproductlistComponent,canActivate:[sellerauthGuard]},
   {path:'selleraddproduct',component:SelleraddproductComponent,canActivate:[sellerauthGuard]},
-  {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]}
-
+  {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]},
+{path:'search',component:SerachproductComponent,canActivate:[sellerauthGuard]}
 
 ];
 

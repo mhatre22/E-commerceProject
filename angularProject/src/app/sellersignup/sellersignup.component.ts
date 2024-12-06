@@ -30,7 +30,7 @@ export class SellersignupComponent implements OnInit {
   }
   sellerSignupForm :FormGroup|any;
   Signupdata:any;
-  Signup(Signupdata:FormGroup){
+  Signup(Signupdata:NgForm){
     console.log(Signupdata.value)
     this.sellerSignupdata = Signupdata.value
     this.ecommerce.postsellerData(this.sellerSignupdata).subscribe((data)=>{

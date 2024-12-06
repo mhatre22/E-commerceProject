@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { EcommerceService } from 'src/assets/Services/ecommerce.service';
@@ -25,7 +25,7 @@ this.loginForm = this.fb.group({
   get f(){return this.loginForm.controls;}
   loginForm :FormGroup |any;
   logindata:any;
-  Login(lData:FormGroup){
+  Login(lData:NgForm){
     this.submitted = true;
     console.log(lData.value)
     this.logindata = lData.value
