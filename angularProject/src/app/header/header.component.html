@@ -22,9 +22,11 @@
             <li
               class="list-group-item"
               *ngFor="let product of filteredProducts"
-              (click)="selectProduct(product.productName)"
-            >
+              (click)="selectProduct(product.productName)">
+              <span *ngIf="product.category.toLowerCase() === searchForm.get('category')?.value.toLowerCase()">
               {{ product.productName }}
+              {{product.category}}
+            </span>
             </li>
           </ul>
                     

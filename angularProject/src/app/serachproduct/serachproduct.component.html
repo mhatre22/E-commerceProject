@@ -1,9 +1,8 @@
 <div *ngIf="filteredProducts && filteredProducts.length > 0; else noResults">
   <div *ngFor="let product of filteredProducts" class="card-box">
-   <div class="card"><br/>
-    
 
-    <p><img src="{{product.image}}" alt=""></p>
+   <div class="card"><br/>
+    <p><img src="{{product.image}}" alt="image"></p>
     <div class="card">
       <h5>{{ product.productName }}</h5>
       <p>Category: {{ product.category }}</p>

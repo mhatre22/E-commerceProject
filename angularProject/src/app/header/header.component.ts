@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  this.product.getsearchProduct('query').subscribe(data=>{
+  this.product.getsearchProduct().subscribe(data=>{
     this.products = data;
   console.log('Products:', this.products);
   });
@@ -39,13 +39,24 @@ export class HeaderComponent implements OnInit {
     this.filteredProducts = this.products.filter((product) =>
       product.productName.toLowerCase().includes(query)
     );
-    this.isDropdownVisible = this.filteredProducts.length > 0;
     console.log('Filtered Products:', this.filteredProducts); 
   });
+  this.searchForm.get('query')?.valueChanges.subscribe((value: string) => {
+    console.log("Input value:", value); 
+    const query = value?.toLowerCase() || ''; 
+    this.filteredProducts = this.products.filter((product) =>
+      product.category.toLowerCase().includes(query)
+    );
+    console.log('Filtered Products:', this.filteredProducts); 
+  });
+
+
+
+  this.isDropdownVisible = this.filteredProducts.length > 0;
 }
 
-selectProduct(productName: string): void {
-  this.searchForm.get('query')?.setValue(productName);
+selectProduct(query: string): void {
+  this.searchForm.get('query')?.setValue(query);
   this.filteredProducts = []; 
   this.isDropdownVisible = false;
 }
@@ -54,7 +65,7 @@ selectProduct(productName: string): void {
 
   search(): void {
     const query = this.searchForm.get('query')?.value;
-    this.router.navigate(['/searchResult'], { queryParams: { q : query } });
+    this.router.navigate(['searchResult'], { queryParams: { q : query } });
     this.selectProduct(query)
 
   }
