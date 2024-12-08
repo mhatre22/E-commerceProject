@@ -1,13 +1,13 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { product } from '../class/datatypes';
-import { Observable } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
+  productUrl ='http://localhost:3000/product/';
   constructor(private http:HttpClient) { }
   getProductId(id: any){
     return this.http.get(`http://localhost:3000/product/${id}`);
@@ -18,10 +18,9 @@ export class ProductService {
   popularPro(){
     return this.http.get<product[]>('http://localhost:3000/product?_limit=8');
   }
-  searProduct(query:string):Observable<product[]>{
-    return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
+  getsearchProduct(query: string): Observable<any[]> {
+    const params = query ? new HttpParams().set('q', query): undefined
+    return this.http.get<any[]>(this.productUrl,{params});
   }
-  fetchProducts(searchproduct:string){
-   return this.http.get<product[]>(`http://localhost:3000/product?=${searchproduct}`)
+
   }
-}

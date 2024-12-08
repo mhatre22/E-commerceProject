@@ -25,7 +25,7 @@ this.loginForm = this.fb.group({
   get f(){return this.loginForm.controls;}
   loginForm :FormGroup |any;
   logindata:any;
-  Login(lData:NgForm){
+  Login(lData:FormGroup){
     this.submitted = true;
     console.log(lData.value)
     this.logindata = lData.value

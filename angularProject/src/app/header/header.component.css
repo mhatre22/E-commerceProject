@@ -1,37 +1,23 @@
 nav{
-    position: fixed;
-    background-color: white;
     width: 100%;
-}
-nav img{
-    padding-left: 80px;
-}
-
-.search{
-display: flex;
- width: 500px;
- align-items: center;
- background-color: aliceblue;
- color: blueviolet;
-
-}
-.center{
-   justify-content: space-around;
-   color: black;
-   font-weight:400;
+    background-color: #fff;
+    justify-content: space-around;
 
 }
 .cardcenter{
     padding-left: 70px;
    margin-top: 6px;
-
+}
+.space{
+    padding-left: 300px;
+   
+}
+.height-input{
+    height: 40px;
+    width: 300px;
 }
 img{
     border-radius: 5px;
-}
-.padding{
-    padding-left: 70px;
-    margin-top: 20px;
 }
 
 .box{
@@ -119,28 +105,16 @@ a {
     display: inline-flex;
 
 }
-.suggest-result,ul{
-    position: absolute;
-    display: list-item !important;
-    background: #fff;
+.list{
+    padding-left: 400px;
+    z-index: 2;
+}
+li.ul{
     width: 500px;
-    top: 40px;
-    border: 1px solid #ddd;
+    padding-left: 100px;
+   
 }
-.suggest-result{
-    border: 1px solid #fff;
-    padding: 5px;
+li{
+    color: blueviolet;
 }
-
-.suggest-result li{
-border: 1px solid #ddd;
-color: blueviolet;
- z-index: 2; 
-padding: 5px;
-
-}
-ul {
-    list-style-type: none;
-    margin-top: 15px;
-  }
- 
+  

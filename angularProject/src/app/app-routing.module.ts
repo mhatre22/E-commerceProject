@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'sellerproductlist',component:SellerproductlistComponent,canActivate:[sellerauthGuard]},
   {path:'selleraddproduct',component:SelleraddproductComponent,canActivate:[sellerauthGuard]},
   {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]},
-{path:'search',component:SerachproductComponent,canActivate:[sellerauthGuard]}
+{path:'searchResult',component:SerachproductComponent}
 
 ];
 

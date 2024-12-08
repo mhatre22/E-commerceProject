@@ -1,8 +1,8 @@
 import { query } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
-import { debounceTime,  filter, of, switchMap } from 'rxjs';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { product } from 'src/assets/class/datatypes';
 import { ProductService } from 'src/assets/Services/product.service';
 
@@ -12,43 +12,51 @@ import { ProductService } from 'src/assets/Services/product.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  searchControl = new FormControl('');
-  allProducts :undefined |product[];
-  productSeach:undefined|product[];
-  searching:undefined|product [];
+  searchForm: FormGroup;
+  products: any[] = [];
+  filteredProducts: any[] = [];
+  isDropdownVisible = false;
+
+
 
   
-  constructor(private router: Router,private product:ProductService) { }
+  constructor(private router: Router,private product:ProductService,
+ 
+    private fb:FormBuilder,private cdr: ChangeDetectorRef ) { 
+    this.searchForm = this.fb.group({
+      query:['']
+    });
+  }
+
   ngOnInit(): void {
-    this.product.searProduct('productSeach').subscribe((data) => {
-      this.allProducts = data;
-      this.productSeach = data; 
-     data.length=7;
-    });
-    this.product.searProduct('productSeach').subscribe((data) => {
-      this.allProducts = data;
-      this.productSeach = data;
-      data.length=7;
-    });
+  this.product.getsearchProduct('query').subscribe(data=>{
+    this.products = data;
+  console.log('Products:', this.products);
+  });
+  this.searchForm.get('query')?.valueChanges.subscribe((value: string) => {
+    console.log("Input value:", value); 
+    const query = value?.toLowerCase() || ''; 
+    this.filteredProducts = this.products.filter((product) =>
+      product.productName.toLowerCase().includes(query)
+    );
+    this.isDropdownVisible = this.filteredProducts.length > 0;
+    console.log('Filtered Products:', this.filteredProducts); 
+  });
+}
+
+selectProduct(productName: string): void {
+  this.searchForm.get('query')?.setValue(productName);
+  this.filteredProducts = []; 
+  this.isDropdownVisible = false;
+}
+
   
-    this.searchControl.valueChanges.pipe(
-      debounceTime(300),
-      switchMap((searchTerm: string | null) => {
-        if (!searchTerm) {
-          return of(this.allProducts);
-        }
-      
-        const filteredProducts = this.allProducts?.filter(product =>
-          product?.productName?.toLowerCase().includes(searchTerm?.toLowerCase() ?? ''),
-           
-        );
-        return of(filteredProducts); 
-      })
-    ).subscribe(filteredProducts => {
-      this.productSeach = filteredProducts;
-    });
-    
-    
+
+  search(): void {
+    const query = this.searchForm.get('query')?.value;
+    this.router.navigate(['/searchResult'], { queryParams: { q : query } });
+    this.selectProduct(query)
+
   }
   goToLogin(){
     this.router.navigateByUrl('/login')
@@ -56,24 +64,15 @@ export class HeaderComponent implements OnInit {
   goTosellerLogin(){
     this.router.navigateByUrl('/sellerlogin')
   }
-  hideInput(){
-    this.productSeach = undefined;
-  }
-  submitSearch(val:string){
-const searching = this.searchControl.value
-if(searching){
-  this.router.navigate(['/search'], { queryParams: { q: searching } });
-}
-  }
-  onKeyUp(event: any): void {
-    const inputValue = event.target.value;
-    console.log('Keyup event triggered:', inputValue);
-  }
+
+  hideDropdown(): void {
+    setTimeout(() => {
+      this.isDropdownVisible = false;
+    }, 200);
+
 }
 
-
-
-
+}
 
 
 
