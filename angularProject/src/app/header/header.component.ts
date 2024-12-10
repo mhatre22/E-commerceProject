@@ -46,7 +46,7 @@ if (val.url){
     this.router.navigateByUrl('/login')
   }
   goToseller(){
-    this.router.navigateByUrl('/sellerlogin')
+    this.router.navigateByUrl('/seller-auth')
   }
   goToHome(){
     this.router.navigateByUrl('')

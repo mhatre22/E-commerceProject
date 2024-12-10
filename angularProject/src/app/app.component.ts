@@ -9,10 +9,10 @@ import { SellerService } from 'src/assets/Services/seller.service';
 })
 export class AppComponent implements OnInit {
   title = 'angularProject';
-  constructor(private router:Router,private sellerService:SellerService)
-  {
-    localStorage.setItem("islogin","false")
+  constructor(private router:Router,private sellerService:SellerService){
+
   }
+
 
   ngOnInit(): void {
 

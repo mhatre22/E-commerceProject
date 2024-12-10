@@ -1,6 +1,5 @@
 {
   "seller": [
-   
     {
       "id": "8c42",
       "username": "Snehal Mhatre",
@@ -12,8 +11,34 @@
       "color": "black",
       "password": "444",
       "Confirmpassword": "444"
+    },
+    {
+      "id": "ca06",
+      "userName": "Snehal",
+      "email": "deshmukhsumeet08@gmail.com",
+      "contact": "9545484514",
+      "address": "khopoli",
+      "password": "111",
+      "confirmpassword": "111"
+    },
+    {
+      "id": "7bd6",
+      "userName": "sumeet",
+      "email": "deshmukhsumeet08@gmail.com",
+      "contact": "9545484514",
+      "address": "khopoli",
+      "password": "000",
+      "confirmpassword": "000"
+    },
+    {
+      "id": "d596",
+      "userName": "sumeet",
+      "email": "deshmukhsumeet08@gmail.com",
+      "contact": "9545484514",
+      "address": "khopoli",
+      "password": "95",
+      "confirmpassword": "95"
     }
-
   ],
   "product": [
     {

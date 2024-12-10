@@ -18,36 +18,31 @@ issellerLoggIn = new BehaviorSubject<boolean>(false)
     data,{observe:'response'}).subscribe((result)=>{
       this.issellerLoggIn.next(true);
       localStorage.setItem('seller',JSON.stringify(result.body))
-      this.router.navigateByUrl('sellerhome')
+      this.router.navigateByUrl('/sellerhome')
      console.log(result)
     })
    
   }
-  reloadSeller(){
-    if (localStorage.getItem('seller')){
-      this.issellerLoggIn.next(true);
-      this.router.navigateByUrl('sellerhome')
-    }
-  }
+
   sellerLogin(data:sellerLogin){
     this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`,
       {observe:'response'}).subscribe((result:any)=>{
         console.log(result)
         if(result && result.body.length){
-          console.log("seller login");
-          this.toster.success("Seller Login SuccesFully! ")
+          this.toster.success("Seller Login Success")
           localStorage.setItem('seller',JSON.stringify(result.body))
-          localStorage.setItem("islogin","true")
-          this.router.navigateByUrl('sellerhome')
+          this.router.navigateByUrl('/sellerhome')
         }else{
-          this.toster.error("Seller Login Faild")
-          localStorage.setItem("islogin","false")
-          console.log("seller login Faild");
-          this.router.navigateByUrl('sellerlogin');
+          this.toster.error("Seller Login Faild !!")
         }
-     
+      }
 
-      })
+      )};
 
+  reloadSeller(){
+    if(localStorage.getItem('seller')){
+    this.issellerLoggIn.next(true);
+    this.router.navigateByUrl('/sellerhome')
+    }
   }
 }

@@ -1,0 +1,47 @@
+<br/><br/>
+<div *ngIf="!showLogin" class="container">
+  <h3>Looks like you're new<br/> Seller here</h3>
+<h5>Sign up Seller with your details <br/>to get started</h5>
+<a style="color: blue; font-size: large;" (click)="openloginSeller()"><b><u>Already SignUp Seller ?</u></b></a>
+  <form #sellerSignupForm="ngForm"  (ngSubmit)="sellerSignup(sellerSignupForm)"><br/>
+    <div>
+      <label for="userName" class="form-label">Enter Username :</label>
+      <input class="form-control" type="text" ngModel name="username" required/>
+
+      <label for="email" class="form-label">Email Id :</label>
+      <input class="form-control" type="email" ngModel name="email" name="email" required/>
+
+      <label for="contact" class="form-label">Contact :</label>
+      <input class="form-control" type="contact" ngModel name="contact" required/>
+
+      <label for="address" class="form-label">Address :</label>
+      <input class="form-control" type="address" ngModel name="address" required/><br/>
+      
+
+      <label for="password" class="form-label">Password :</label>
+      <input class="form-control" type="password" ngModel name="password" required/><br/>
+
+      <label for="confirmpassword" class="form-label"> Confirm Password :</label>
+      <input class="form-control" type="password" ngModel name="confirmpassword" required/><br/>
+
+    <button class="btn btn-warning form-control" type="submit" [disabled]="!sellerSignupForm.valid"><b><u> SELLER SIGNUP</u></b></button>&nbsp;
+    </div>
+  </form>
+
+</div>
+<!-------sellerLogin------>
+<div *ngIf="showLogin" class="container"><br/>
+    <h3>Login Seller<br/></h3>
+    <h4>Get access to your Orders,</h4>
+    <h4>Wishlist & Recommendation</h4>
+    <form #selleLoginForm="ngForm" (ngSubmit)="goTosellerLogin(selleLoginForm)">
+
+      <label for="email"   class="form-label">Email ID:</label>
+      <input type="email" ngModel class="form-control" name="email" />
+
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" ngModel class="form-control" name="password" ><br/>
+      <button type="submit" class="btn btn-warning form-control"><b><u> SELLER LOGIN</u></b></button>&nbsp;&nbsp;
+      <a class="new"(click)="opensignupSignup()" ><b><u>New Seller SignUp ?</u></b></a><br/><br/>
+      </form>
+    </div>
