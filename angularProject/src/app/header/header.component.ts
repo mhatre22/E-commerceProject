@@ -12,7 +12,6 @@ import { ProductService } from 'src/assets/Services/product.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  searchForm: FormGroup;
   products: any[] = [];
   filteredProducts: any[] = [];
   isDropdownVisible = false;
@@ -23,59 +22,35 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router,private product:ProductService,
  
     private fb:FormBuilder,private cdr: ChangeDetectorRef ) { 
-    this.searchForm = this.fb.group({
-      query:['']
-    });
-  }
-
+ 
+    }
   ngOnInit(): void {
-  this.product.getsearchProduct().subscribe(data=>{
-    this.products = data;
-  console.log('Products:', this.products);
-  });
-  this.searchForm.get('query')?.valueChanges.subscribe((value: string) => {
-    console.log("Input value:", value); 
-    const query = value?.toLowerCase() || ''; 
-    this.filteredProducts = this.products.filter((product) =>
-      product.productName.toLowerCase().includes(query)
-    );
-    console.log('Filtered Products:', this.filteredProducts); 
-  });
-  this.searchForm.get('query')?.valueChanges.subscribe((value: string) => {
-    console.log("Input value:", value); 
-    const query = value?.toLowerCase() || ''; 
-    this.filteredProducts = this.products.filter((product) =>
-      product.category.toLowerCase().includes(query)
-    );
-    console.log('Filtered Products:', this.filteredProducts); 
-  });
+this.router.events.subscribe((val:any)=>{
+if (val.url){
+  console.log(val.url)
+  if(localStorage.getItem('seller') && val.url.includes('seller')){
 
-
-
-  this.isDropdownVisible = this.filteredProducts.length > 0;
+  }
 }
+})
 
-selectProduct(query: string): void {
-  this.searchForm.get('query')?.setValue(query);
-  this.filteredProducts = []; 
-  this.isDropdownVisible = false;
-}
+
 
   
 
-  search(): void {
-    const query = this.searchForm.get('query')?.value;
-    this.router.navigate(['searchResult'], { queryParams: { q : query } });
-    this.selectProduct(query)
+  
+}
 
-  }
+
   goToLogin(){
     this.router.navigateByUrl('/login')
   }
-  goTosellerLogin(){
+  goToseller(){
     this.router.navigateByUrl('/sellerlogin')
   }
-
+  goToHome(){
+    this.router.navigateByUrl('')
+  }
   hideDropdown(): void {
     setTimeout(() => {
       this.isDropdownVisible = false;

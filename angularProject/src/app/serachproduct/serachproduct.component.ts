@@ -16,12 +16,13 @@ export class SerachproductComponent implements OnInit {
   ){}
   query: string = '';
   products: any[] = [];
+  category:any []=[];
   filteredProducts:undefined|product[];
   ngOnInit(): void {
       this.product.getsearchProduct().subscribe((data) => {
         this.products = data;
   
-        const searchQuery = this.activate.snapshot.queryParamMap.get('q');
+        const searchQuery = this.activate.snapshot.queryParamMap.get('query');
         if (searchQuery) {
           this.filteredProducts = this.products.filter((product) =>
             product.productName.toLowerCase().includes(searchQuery.toLowerCase())

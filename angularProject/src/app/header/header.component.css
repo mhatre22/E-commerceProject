@@ -29,6 +29,7 @@ img{
 }
 .content{
     background-color:#fefbfb; 
+    width: 100%;
     margin-top: 50px;
     padding-left: 30px;
     color: #514e4e;
@@ -106,15 +107,21 @@ a {
 
 }
 .list{
-    padding-left: 400px;
+    padding-left: 300px;
+    padding-right: 100px;
     z-index: 2;
+ 
+
 }
-li.ul{
-    width: 500px;
-    padding-left: 100px;
+li,ul{
+    width: 250px;
+    padding-left: 60px;
    
 }
 li{
     color: blueviolet;
 }
-  
+button{
+    height: 40px;
+    width: 80px;
+}

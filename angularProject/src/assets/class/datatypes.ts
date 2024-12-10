@@ -1,12 +1,17 @@
 export interface sellerLogin{
-sellerName:string,
-email:string,
-password:string
+    email  : string,
+    password :number
 }
 export interface sellersignup{
-sellerName:string,
-email:string,
-password:string
+  id: string,
+      username: string
+      email  : string,
+      contact: number,
+      address: string,
+      company: string,
+      product: string,
+      password :number
+      Confirmpassword: number
 
 }
 export interface product{

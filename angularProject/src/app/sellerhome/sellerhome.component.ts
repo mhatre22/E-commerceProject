@@ -19,14 +19,7 @@ export class SellerhomeComponent implements OnInit {
   }
   productList:undefined|product[] 
    ngOnInit(): void {
-    const storename =localStorage.getItem('username')
-    if (storename){
-      this.username =storename;
-      this.welcometext = `Welcome Seller... ${this.username} !`;
-      console.log(this.username)
-    }else{
-      this.welcometext = `Welcome, Guest !`;
-    }
+   
     this.ecommerce.getProduct().subscribe(data=>{
     console.log(data);
     this.productList= data; 

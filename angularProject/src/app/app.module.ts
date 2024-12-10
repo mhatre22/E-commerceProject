@@ -9,8 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
-import { SellersignupComponent } from './sellersignup/sellersignup.component';
-import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
+
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import{HttpClientModule} from '@angular/common/http'
 import { provideToastr, ToastrModule } from 'ngx-toastr';  
@@ -18,10 +17,10 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
 import { UserhomeComponent } from './userhome/userhome.component';
 import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
-import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
 import { NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { SerachproductComponent } from './serachproduct/serachproduct.component';
+
 
 
 
@@ -35,14 +34,10 @@ import { SerachproductComponent } from './serachproduct/serachproduct.component'
     HeaderComponent,
     FooterComponent,
     CartComponent,
-    SellersignupComponent,
-    SellerloginComponent,
     SellerhomeComponent,
     UserhomeComponent,
     SellerproductlistComponent,
     SelleraddproductComponent,
-    SellerupdateProductComponent,
-
     SerachproductComponent,
 
 

@@ -1,69 +1,19 @@
 {
-  "sellerData": [
+  "seller": [
+   
     {
-      "id": "eefc",
+      "id": "8c42",
       "username": "Snehal Mhatre",
       "email": "mhatresnehal75@gmail.com",
       "contact": "7083089659",
       "address": "pen-Raigad",
       "company": "confianza PTV LMD",
       "product": "Mobile",
-      "password": "12345",
-      "Confirmpassword": "12345"
-    },
-    {
-      "id": "acf9",
-      "username": "Apeksha Patil",
-      "email": "apu@gmail.com",
-      "contact": "9545484514",
-      "address": "pen-Raigad",
-      "company": "confianza PTV LMD",
-      "product": "Mobile",
-      "password": "456",
-      "Confirmpassword": "456"
-    },
-    {
-      "id": "b4f9",
-      "username": "sumeet deshmukh",
-      "email": "deshmukhsumeet08@gmail.com",
-      "contact": "9545484514",
-      "address": "khopoli",
-      "company": "confianza PTV LMD",
-      "product": "Mobile",
-      "password": "123",
-      "Confirmpassword": "123"
-    },
-    {
-      "id": "717e",
-      "username": "sita mhatre",
-      "email": "sita@gmail.com",
-      "contact": "7083089659",
-      "address": "pen-Raigad",
-      "company": "confianza PTV LMD",
-      "product": "Mobile",
-      "password": "111",
-      "Confirmpassword": "111"
+      "color": "black",
+      "password": "444",
+      "Confirmpassword": "444"
     }
-  ],
-  "userData": [
-    {
-      "id": "051c",
-      "userName": "Snehal Mhatre",
-      "email": "mhatresnehal75@gmail.com",
-      "address": "pen-Raigad",
-      "contact": "7083089659",
-      "password": "12345",
-      "confirmpassword": "12345"
-    },
-    {
-      "id": "b34a",
-      "userName": "Snehal Mhatre",
-      "email": "mhatresnehal75@gmail.com",
-      "address": "pen-Raigad",
-      "contact": "7083089659",
-      "password": "12345",
-      "confirmpassword": "12345"
-    }
+
   ],
   "product": [
     {

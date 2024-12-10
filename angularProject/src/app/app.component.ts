@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SellerService } from 'src/assets/Services/seller.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'angularProject';
-  constructor(private router:Router){}
+  constructor(private router:Router,private sellerService:SellerService)
+  {
+    localStorage.setItem("islogin","false")
+  }
 
   ngOnInit(): void {
-  
-  }
 
 }
 
+}

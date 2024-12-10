@@ -1,14 +1,16 @@
-import { inject } from '@angular/core';
+import { Inject, inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-export const sellerauthGuard: CanActivateFn = (route, state) => {
-let _router=inject(Router)
-  let islogInid = localStorage.getItem("islogIn");
-  if(islogInid =="false"){
-    alert("Seller please Login ")
-    _router.navigate([''])
-    return false;
+import { SellerService } from 'src/assets/Services/seller.service';
 
+export const sellerauthGuard: CanActivateFn = ()=> {
+  const router = inject(Router)
+  const sellerService = Inject (SellerService);
+  let islogin = localStorage.getItem('islogin');
+  if(islogin == 'false'){
+  router.navigateByUrl('sellerlogin')
+  return false;
   }
   return true;
   
-};
+  }
+  
