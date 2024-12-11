@@ -10,6 +10,7 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 import { SerachproductComponent } from './serachproduct/serachproduct.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
+import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
 
 const routes: Routes = [
 
@@ -18,6 +19,7 @@ const routes: Routes = [
 { path:'seller-auth',component:SellerAuthComponent},
   {path:'sellerhome',component:SellerhomeComponent ,canActivate:[sellerauthGuard]},
   {path:'selleraddproduct',component:SelleraddproductComponent,canActivate:[sellerauthGuard]},
+  {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]},
   {path:'searchResult',component:SerachproductComponent}
 
 ];

@@ -18,6 +18,7 @@ import { NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { SerachproductComponent } from './serachproduct/serachproduct.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
+import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
 
 
 
@@ -34,6 +35,7 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
     SelleraddproductComponent,
     SerachproductComponent,
     SellerAuthComponent,
+    SellerupdateProductComponent,
 
 
 

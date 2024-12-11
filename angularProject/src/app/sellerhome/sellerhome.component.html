@@ -28,7 +28,7 @@
     <td>{{item.color}}</td>
     <td>{{item.price}}</td>
     <td>{{item.description}}</td>
-    <td><button class="btn btn-success"><i class="bi bi-pencil-square"></i></button></td>
+    <td><button class="btn btn-success" (click)="updateProduct(item.id)"><i class="bi bi-pencil-square"></i></button></td>
     <td><button class="btn btn-danger" (click)="deleteProduct(item.id)"><i class="bi bi-trash3"></i></button></td>
   </tr>
   </tbody>

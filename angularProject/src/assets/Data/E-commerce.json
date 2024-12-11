@@ -42,13 +42,13 @@
   ],
   "product": [
     {
-      "id": "d89f",
       "productName": "iphone 13 Pro max",
-      "color": "Black,Red,White",
       "category": "Mobile",
+      "color": "Black,Red,Blue",
       "price": "75000₹",
       "description": "15.40 cm (6.1-inch) Super Retina XDR display Advanced camera system for better photos in any light Cinematic mode now in 4K Dolby Vision up to 30 fps",
-      "image": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-Max.jpg"
+      "image": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-Max.jpg",
+      "id": "d89f"
     },
     {
       "id": "c6ea",
@@ -60,13 +60,13 @@
       "image": "https://www.euronics.lv/UserFiles/Products/Images/65198-32pfl3258h-12-a1p-.jpg"
     },
     {
-      "id": "4882",
       "productName": "Bluetooth Speaker",
-      "color": "Black,Red,White,Green",
       "category": "Speaker",
+      "color": "Black,Red,White",
       "price": "1500₹",
       "description": "Sony [New Srs-Xb100 Wireless Bluetooth Portable Lightweight Super-Compact Travel Speaker,Extra-Durable",
-      "image": "https://media.ao.com/en-GB/Productimages/Images/rvLarge/sony_srs-xb30b_wirelessspeakersystems_02_l.jpg"
+      "image": "https://media.ao.com/en-GB/Productimages/Images/rvLarge/sony_srs-xb30b_wirelessspeakersystems_02_l.jpg",
+      "id": "4882"
     },
     {
       "id": "01ed",

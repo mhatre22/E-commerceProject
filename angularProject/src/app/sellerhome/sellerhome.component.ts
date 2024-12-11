@@ -41,6 +41,9 @@ proList(){
  
     });
 }
+updateProduct(id:any){
+  this.router.navigateByUrl('/sellerupdateproduct/'+id)
+}
 }
 
 
