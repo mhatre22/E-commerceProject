@@ -45,4 +45,5 @@ issellerLoggIn = new BehaviorSubject<boolean>(false)
     this.router.navigateByUrl('/sellerhome')
     }
   }
+
 }

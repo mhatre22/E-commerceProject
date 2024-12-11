@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { EcommerceService } from 'src/assets/Services/ecommerce.service';
+import { ProductService } from 'src/assets/Services/product.service';
+
 
 @Component({
   selector: 'app-selleraddproduct',
@@ -10,35 +11,24 @@ import { EcommerceService } from 'src/assets/Services/ecommerce.service';
   styleUrls: ['./selleraddproduct.component.css']
 })
 export class SelleraddproductComponent implements OnInit{
-  constructor(private router:Router,private ecommerce:EcommerceService,private toastr:ToastrService,
-    private fb:FormBuilder
+  constructor(private router:Router,private toastr:ToastrService,
+    private productService:ProductService
+    
   ){}
-  addProductForm :FormGroup|any
+ 
   addProductdata:any
   ngOnInit(): void {
-    this.addProductForm = this.fb.group({
-      productName : [''],
-      category :[''],
-      price:[''],
-      description:[''],
-      image:['']
-
-    })
-   
+this.productService.getProduct()
   }
-  addProduct(addproduct:FormGroup){
+  addProduct(addproduct:NgForm){
     console.log(addproduct.value)
     this.addProductdata= addproduct.value;
-    this.ecommerce.postProduct(this.addProductdata).subscribe(data=>{
+    this.productService.postProduct(this.addProductdata).subscribe((data)=>{
       console.log(data);
-      if(this.addProductForm.valid){
-        this.toastr.success("Product added Suceessfully")
-        this.router.navigateByUrl('sellerproductlist')
-      }else{
-      this.toastr.error("Try again")
-
-      }
+      this,this.addProductdata = data;
     })
+  this.toastr.success("Product Add")
+  this.router.navigateByUrl('sellerproductlist')
     
   }
 

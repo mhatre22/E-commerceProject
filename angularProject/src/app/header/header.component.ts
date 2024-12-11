@@ -12,36 +12,31 @@ import { ProductService } from 'src/assets/Services/product.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  products: any[] = [];
-  filteredProducts: any[] = [];
-  isDropdownVisible = false;
-
-
-
-  
-  constructor(private router: Router,private product:ProductService,
- 
-    private fb:FormBuilder,private cdr: ChangeDetectorRef ) { 
- 
+  sellerName :string=""
+  constructor(private router: Router ) { 
     }
+    menuType :string='default';
   ngOnInit(): void {
 this.router.events.subscribe((val:any)=>{
 if (val.url){
-  console.log(val.url)
   if(localStorage.getItem('seller') && val.url.includes('seller')){
-
+    console.log(" inside seller")
+    this.menuType = "seller"
+    if(localStorage.getItem('seller')){
+      let storeName = localStorage.getItem('seller');
+      let sellerData =storeName && JSON.parse(storeName)[0];
+      this.sellerName = sellerData.username;
+      console.log(this.sellerName);
+    }
+  }else{
+    console.log(" outside seller")
+     this.menuType='default'
   }
 }
 })
 
-
-
-  
-
   
 }
-
-
   goToLogin(){
     this.router.navigateByUrl('/login')
   }
@@ -51,13 +46,16 @@ if (val.url){
   goToHome(){
     this.router.navigateByUrl('')
   }
-  hideDropdown(): void {
-    setTimeout(() => {
-      this.isDropdownVisible = false;
-    }, 200);
-
-}
-
+  sellerLogout(){
+    localStorage.removeItem('seller')
+    this.router.navigateByUrl('')
+  }
+  addProduct(){
+    this.router.navigateByUrl('selleraddproduct');
+  }
+  productList(){
+    this.router.navigateByUrl('sellerhome');
+  }
 }
 
 

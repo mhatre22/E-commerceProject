@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +13,6 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import{HttpClientModule} from '@angular/common/http'
 import { provideToastr, ToastrModule } from 'ngx-toastr';  
 import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
-import { SellerproductlistComponent } from './sellerproductlist/sellerproductlist.component';
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 import { NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -29,12 +27,10 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
     HeaderComponent,
     FooterComponent,
     CartComponent,
     SellerhomeComponent,
-    SellerproductlistComponent,
     SelleraddproductComponent,
     SerachproductComponent,
     SellerAuthComponent,

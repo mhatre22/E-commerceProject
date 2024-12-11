@@ -8,19 +8,22 @@ import { query } from '@angular/animations';
   providedIn: 'root'
 })
 export class ProductService {
-   private productUrl:string ='http://localhost:3000/product/';
+
   constructor(private http:HttpClient) { }
-  getProductId(id: any){
-    return this.http.get(`http://localhost:3000/product/${id}`);
-  }
-  getupdate(body:any,id:any){
-    return this.http.put<product>('http://localhost:3000/product/'+id,body);
-  }
+
+
   popularPro(){
     return this.http.get<product[]>('http://localhost:3000/product?_limit=8');
   }
-  getsearchProduct(): Observable<product[]> {
-    return this.http.get<product[]>(this.productUrl);
-  }
-
+  postProduct(data:product){
+   return this.http.post('http://localhost:3000/product,data',data);
+    }
+  
+  getProduct(){
+   return this.http.get<product[]>('http://localhost:3000/product');
+    }
+    deletProdutcs(id:Number){
+     return this.http.delete(`http://localhost:3000/product/${id}`)
+  
+    }
   }

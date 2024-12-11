@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { product } from 'src/assets/class/datatypes';
-import { name} from 'src/assets/class/name';
-import { EcommerceService } from 'src/assets/Services/ecommerce.service';
+import { ProductService } from 'src/assets/Services/product.service';
+
 
 @Component({
   selector: 'app-sellerhome',
@@ -11,36 +11,38 @@ import { EcommerceService } from 'src/assets/Services/ecommerce.service';
   styleUrls: ['./sellerhome.component.css']
 })
 export class SellerhomeComponent implements OnInit {
-  username :string =''
-  welcometext :string =''
+  
   constructor( private router:Router,
-  private toastr:ToastrService,private ecommerce:EcommerceService,
+  private toastr:ToastrService,
+  private productService:ProductService
  ){
   }
+  product:any;
   productList:undefined|product[] 
    ngOnInit(): void {
-   
-    this.ecommerce.getProduct().subscribe(data=>{
-    console.log(data);
-    this.productList= data; 
-  });
+this.proList();
+  
+  };
+  deleteProduct(id:number){
+ this.productService.deletProdutcs(id).subscribe((result)=>{
+  if(result){
+    this.toastr.success("Product Deleted")
+    this.proList();
+  }
+
+ });
+
+  }
+proList(){
+  this.productService.getProduct().subscribe((result)=>{
+    if(result){
+     this.productList = result;
+    }
  
-
+    });
+}
 }
 
-  sellerlogout(){
-    localStorage.removeItem("seller")
-    localStorage.setItem("islogIn","flase");
-    this.toastr.success("Seller have logged out successfully.");
-    this.router.navigate(['/sellerlogin'])
 
-  }
-  productList1(){
-    this.router.navigateByUrl('sellerproductlist');
 
-  }
-  addProduct(){
-    this.router.navigateByUrl('selleraddproduct');
 
-  }
-}

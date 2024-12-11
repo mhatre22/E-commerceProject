@@ -96,15 +96,6 @@
       "image": "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/cf05c8fd-9177-4f88-a194-7a5f660bed7f.0ab64f758e0eb6af421e43bcb4682ea8.png?odnHeight=2000&odnWidth=2000&odnBg=ffffff"
     },
     {
-      "id": "e6c8",
-      "productName": "Dumbbell Rods",
-      "color": "Black",
-      "category": "Gym Equipments",
-      "price": "₹3,129",
-      "description": "Amazon Brand - Symactive PVC 100 Kg Home Gym Set with One 4 Ft Plain + One 3 Ft Curl Rod and One Pair Dumbbell Rods, Multicolour",
-      "image": "https://i5.walmartimages.com/asr/75ae21d3-ead7-4a68-979d-2b0c9de7798f_1.6ab88a815ab050cc20cde22926432327.jpeg"
-    },
-    {
       "id": "949a",
       "productName": " Fastrack FR1 watch",
       "color": "Black,Red,White",
@@ -112,15 +103,6 @@
       "price": "₹1,999",
       "description": "Bluetooth 5.2\nBluetooth Calling\n1.39 inches Touch Display\nWater Resistant, 1.5 m\nDust Proof\nHeart Rate Monitor\nSpO2 (Blood Oxygen) Monitor\nPedometer, Sleep Monitor, Calorie Count, Step Count",
       "image": "https://cdn1.smartprix.com/rx-iiXaQHa6a-w1200-h1200/iXaQHa6a.jpg"
-    },
-    {
-      "id": "0a51",
-      "productName": "Apple MacBook ",
-      "color": "Black,White",
-      "category": "Laptops",
-      "price": "120000₹",
-      "description": "Apple MacBook Pro 15-Inch Retina Laptop i7 2.5GHz - 3.7GHz / 16GB DDR3 Ram / 2TB SSD / Radeon R9 M370X 2GB Video / OS X Mojave / Thunderbolt / HDMI / MJLT2LL/A",
-      "image": "https://cdn.mos.cms.futurecdn.net/fadf68e0b0f4e39890deabdbccdf3e2d.jpg"
     },
     {
       "id": "720d",
@@ -159,17 +141,9 @@
       "image": "https://spgfan.com/wp-content/uploads/2021/11/Logic.7.jpg"
     },
     {
-      "id": "14d8",
-      "productName": "The World of David Walliams ",
-      "color": "Black,Red,White",
-      "category": " Set Ever 5 Books",
-      "price": "1,625.23₹",
-      "description": "The World of David Walliams Best Box Set Ever 5 Books - Ages 7-9 - Paperback is quite the title!",
-      "image": "https://cdn.shopify.com/s/files/1/0024/6874/1219/products/B2D0066WorldOfDavidWalliams5BooksSlipcase-Front_2800x2800.jpg?v=1625481078"
-    },
-    {
       "id": "5a4d",
       "productName": "iphone 16 Pro max",
+      "color": "Gold",
       "category": "Mobile",
       "price": "180000₹",
       "description": "iPhone 16 Pro Max 256 GB: 5G Mobile Phone with Camera Control, 4K 120 fps Dolby Vision and a Huge Leap in Battery Life. Works with AirPods; Desert Titanium",

@@ -1,13 +1,16 @@
 <br/>
 <h4><u>Aadd all new Product</u> </h4>&nbsp;
 <div class="container1">
-<form [formGroup]="addProductForm" (ngSubmit)="addProduct(addProductForm)">
-<input class="form-input" type="text" name="productName" placeholder="Enter Product Name" required formControlName="productName"><br/><br/>
-<input class="form-input" type="text" name="category" placeholder="Enter  Product Category"  required formControlName="category"><br/><br/>
-<input class="form-input" type="text" name="price" placeholder="Enter Product Price" required  formControlName="price"><br/><br/>
-<textarea class="form-input" type="text" name="description" placeholder="Enter Product Description"   required  formControlName="description">
+<form #addProductForm="ngForm" (ngSubmit)="addProduct(addProductForm)">
+<input class="form-input" type="text" name="productName" placeholder="Enter Product Name" required ngModel><br/><br/>
+<input class="form-input" type="text" name="category" placeholder="Enter  Product Category"  required ngModel><br/><br/>
+<input class="form-input" type="text" name="color" placeholder="Enter  Product Color"  required ngModel><br/><br/>
+
+<input class="form-input" type="text" name="price" placeholder="Enter Product Price" required  ngModel><br/><br/>
+<textarea class="form-input" type="text" name="description" placeholder="Enter Product Description"   required ngModel>
 </textarea><br/><br/>
-<input class="form-input" type="text" name="image" placeholder="Enter Product Image URL"  required formControlName="image"><br/><br/>
+<input class="form-input" type="text" name="image" placeholder="Enter Product Image URL"  required ngModel><br/><br/>
 <button type="submit" [disabled]=!addProductForm.valid class="btn btn-warning input">Add Product</button>
 </form>
+    
 </div>
