@@ -20,6 +20,8 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { LoginauthComponent } from './loginauth/loginauth.component';
+import { UserauthComponent } from './userauth/userauth.component';
 
 
 
@@ -38,6 +40,8 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     SellerupdateProductComponent,
     SearchresultComponent,
     ProductdetailsComponent,
+    LoginauthComponent,
+    UserauthComponent,
 
 
 

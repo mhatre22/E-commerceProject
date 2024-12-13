@@ -22,11 +22,13 @@
       "confirmpassword": "111"
     }
   ],
+  "user": [],
   "product": [
     {
       "productName": "iphone 13 Pro max",
       "category": "Mobile",
-      "color": "#3aee70",
+      "color1": "#c00505",
+      "color2": "#49bd0a",
       "price": "75,000₹",
       "description": "15.40 cm (6.1-inch) Super Retina XDR display Advanced camera system for better photos in any light Cinematic mode now in 4K Dolby Vision up to 30 fps",
       "image": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-Max.jpg",
@@ -35,7 +37,8 @@
     {
       "productName": "ZEBRONICS LCD",
       "category": "LCD",
-      "color": "#ffffff",
+      "color1": "#e7e6ea",
+      "color2" : "#070708"        ,
       "price": "35,000₹",
       "description": "Acer 80 cm (32 inches) I Pro Series HD Ready Smart LED Google TV AR32HDIGU2841AT (Black)",
       "image": "https://www.euronics.lv/UserFiles/Products/Images/65198-32pfl3258h-12-a1p-.jpg",
@@ -44,7 +47,8 @@
     {
       "productName": "Bluetooth Speaker",
       "category": "Speaker",
-      "color": "#e17714",
+      "color1": "#61aee2",
+      "color2" : "#02070a" ,
       "price": "1,799₹",
       "description": "Sony [New Srs-Xb100 Wireless Bluetooth Portable Lightweight Super-Compact Travel Speaker,Extra-Durable",
       "image": "https://media.ao.com/en-GB/Productimages/Images/rvLarge/sony_srs-xb30b_wirelessspeakersystems_02_l.jpg",
@@ -53,7 +57,8 @@
     {
       "productName": "Bluetooth Wireless",
       "category": "HeadPhone",
-      "color": "#0e0c0c",
+      "color1": "#060c0f",
+      "color2" : "#6ee0dc", 
       "price": "3,549₹",
       "description": "boAt Airdrops 138 TWS Earbuds ( Voice Assistant Supported, Viper Green",
       "image": "https://media.croma.com/image/upload/v1661267309/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/259330_zsth0b.png",
@@ -62,7 +67,8 @@
     {
       "productName": " Fastrack FR1 watch",
       "category": "SmartWatch",
-      "color": "#400ba2",
+      "color1": "#e4ec3b",
+      "color2" : "#090901",
       "price": "1,999₹",
       "description": "Bluetooth 5.2\nBluetooth Calling\n1.39 inches Touch Display\nWater Resistant, 1.5 m\nDust Proof\nHeart Rate Monitor\nSpO2 (Blood Oxygen) Monitor\nPedometer, Sleep Monitor, Calorie Count, Step Count",
       "image": "https://cdn1.smartprix.com/rx-iiXaQHa6a-w1200-h1200/iXaQHa6a.jpg",
@@ -71,7 +77,8 @@
     {
       "productName": "Samsung Galaxy S24 ",
       "category": "Mobile",
-      "color": "#d8ad13",
+      "color1": "#ecb94b",
+      "color2" : "#120f08", 
       "price": "80,000₹",
       "description": "Samsung Galaxy S23 Ultra 5G 256GB 8GB Verde Samsung Samsung Galaxy S23 Samsung Galaxy S23 Ultra 5G",
       "image": "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/cf05c8fd-9177-4f88-a194-7a5f660bed7f.0ab64f758e0eb6af421e43bcb4682ea8.png?odnHeight=2000&odnWidth=2000&odnBg=ffffff",
@@ -80,7 +87,8 @@
     {
       "productName": "Bold-fit Jacket",
       "category": "Winter Men's jacket",
-      "color": "#221c1c",
+      "color1": "#f3f3f2",
+      "color2" : "#120f08", 
       "price": "1,899₹",
       "description": "Boldfit Jacket For Men Winter Wear Puffer Jacket For Men Monsoon Winter Wear for men Men Hooded Winter Jackets For Men",
       "image": "https://ae01.alicdn.com/kf/HTB111ooXinrK1RjSsziq6xptpXaF/Jacket-Men-2018-Autumn-Winter-Military-Clothing-Pocket-Zipper-Outwear-Men-s-Warm-Jacket-Large-size.jpg",
@@ -89,7 +97,8 @@
     {
       "productName": "Soft Toy,",
       "category": " Cute, Soft Toy (33 Cm, Pink), Great Birthday Gift",
-      "color": "#f990f6",
+      "color1": "#f00d35",
+      "color2" : "#f95cdf" ,
       "price": "279₹",
       "description": "\nMade from soft, non-toxic and anti-allergic polyester fabric;Extremely huggable soft toy with conjugate fibre-filled stuffing",
       "image": "https://image.pushauction.com/0/0/faef8218-dbb6-4683-afbe-476b586d7b19/158ff0d8-5752-4fd5-88e8-26f76ae1d75c.jpg",
@@ -98,7 +107,8 @@
     {
       "productName": "Electric Cycle",
       "category": "Cycle",
-      "color": "#110d0d",
+      "color1": "#181fd5",
+      "color2" : "#070708", 
       "price": "15000₹",
       "description": "linen 500W 20\" Folding Electric Bike for Adults, Full Suspension Foldable Ebike with 5 Riding Modes, 48V 7.8Ah Battery,",
       "image": "https://kazam-media.s3.ap-south-1.amazonaws.com/images/eb27da44-14e7-499d-b21f-8c934b3dd34b/1611031152987.jpeg",
@@ -107,7 +117,8 @@
     {
       "productName": " Straight Kurta",
       "category": "Teal Flora Print Women Kurta",
-      "color": "#dde01f",
+      "color1": "#e0e422",
+      "color2" : "#ee30ea", 
       "price": "800₹",
       "description": "Cotton Blend Floral Print Straight Kurta in Mandarin",
       "image": "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/2086105/2017/9/4/11504510267899-Alom-Women-Kurtas-1041504510267616-1.jpg",
@@ -116,7 +127,8 @@
     {
       "productName": "Thinking Game",
       "category": "Activity Games",
-      "color": "#b31919",
+      "color1": "#e7e6ea",
+      "color2" : "#070708", 
       "price": "540₹",
       "description": "Stack, pattern and match the multicolor shapes, but don’t be fooled by these endlessly enjoyable blocks mean brain-boosting business",
       "image": "https://spgfan.com/wp-content/uploads/2021/11/Logic.7.jpg",
@@ -125,7 +137,8 @@
     {
       "productName": "iphone 16 Pro max",
       "category": "Mobile",
-      "color": "#17c4a2",
+      "color1": "#11a6d5",
+      "color2" : "#4eb35f",
       "price": "1,80,000₹",
       "description": "iPhone 16 Pro Max 256 GB: 5G Mobile Phone with Camera Control, 4K 120 fps Dolby Vision and a Huge Leap in Battery Life. Works with AirPods; Desert Titanium",
       "image": "https://m.media-amazon.com/images/I/61giwQtR1qL._SX679_.jpg",

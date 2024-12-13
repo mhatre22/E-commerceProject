@@ -1,22 +1,33 @@
-<div class="container mt-3">
+<div class="row product-Details">
     <hr/>
     <h5 style="text-align: center;">Search Product "{{ searchQuery }}"</h5>
     <p style="color: blue;" *ngIf="searchResults.length === 0">No products found.</p>
     <ul *ngIf="searchResults.length > 0">
         <li *ngFor="let product of searchResults">&nbsp;<hr/>
-          <a routerLink="/productdetails/{{product.id}}">  <img src="{{product.image}}">&nbsp;</a><br/>
-          <b>Product:</b><a routerLink="/productdetails/{{product.id}}">{{ product.productName }}</a><br />
-              <b>Price: {{product.price}}</b><br/>
-                <u style="color: rgb(35, 15, 133); font-size: large;">{{ product.description }}</u>
-                <u style="color: rgb(35, 15, 133); font-size: large;">{{product.category}}</u><br />
-                <u style="color: rgb(35, 15, 133); font-size: large;">{{product.color}}</u><br/>&nbsp;
-             <button style="border-radius: 20px;width: 150px;" class="btn btn-warning">Add to Cart</button>&nbsp;
-             <button style="border-radius: 20px;width: 150px;" class="btn btn-danger">Remove Item</button>
-            &nbsp;
+            <div class="col-sm-6">
+                
+                <a routerLink="/productdetails/{{product.id}}"><img src="{{product.image}}"/></a><br/>
+            </div>
+            <div class="card">
+                <div class="col-sm-6 containt">
+                    <b>Product:</b><a routerLink="/productdetails/{{product.id}}">{{ product.productName }}</a><br />
+                        <b>Price: {{product.price}}</b><br/>
+                         <h6>Category:  <u style="color: rgb(35, 15, 133); font-size: large;">{{product.category}}</u></h6><br />
+                             <div class="color-group">&nbsp;
+                                &nbsp;&nbsp; Color:&nbsp;
+                              <h5 [style.backgroundColor]="product.color1" class="product-color"></h5>&nbsp;
+                              <h5 [style.backgroundColor]="product.color2" class="product-color"></h5>
+                          </div>
+          
+                      <div class="btn-group">
+                        <button style="border-radius: 20px;width: 150px;" class="btn btn-warning">Add to Cart</button> &nbsp; &nbsp; &nbsp;
+                        <button style="border-radius: 20px;width: 150px;" class="btn btn-danger">Remove Item</button>
+                      </div>
+                      &nbsp;
+                      </div>
+            </div>
             &nbsp;
         </li>&nbsp;
     
     </ul>&nbsp;
-
-
-</div>
+   </div>

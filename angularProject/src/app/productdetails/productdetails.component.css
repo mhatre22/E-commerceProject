@@ -4,7 +4,7 @@
     object-fit: contain;
 }
 .product-color{
-    border: 2px solid black;
+    border: 2.5px solid rgb(246, 195, 78);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -26,4 +26,7 @@ h2,h4,h6{
 .quantity-group input{
     width: 50px;
     padding: 10px;
+}
+.color-group{
+    display: inline-flex;
 }

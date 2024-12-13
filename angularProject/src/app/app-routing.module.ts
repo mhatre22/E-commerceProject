@@ -12,6 +12,7 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { UserauthComponent } from './userauth/userauth.component';
 
 const routes: Routes = [
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:'selleraddproduct',component:SelleraddproductComponent,canActivate:[sellerauthGuard]},
   {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]},
   {path:'searchresult',component:SearchresultComponent},
-  {path:'productdetails/:id',component:ProductdetailsComponent}
+  {path:'productdetails/:id',component:ProductdetailsComponent},
+  {path:'user-auth',component:UserauthComponent}
 
 ];
 

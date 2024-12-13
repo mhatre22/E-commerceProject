@@ -35,7 +35,7 @@ if (val.url){
       console.log(this.sellerName);
     }
   }else{
-    console.log(" outside seller")
+    console.log("outside seller")
      this.menuType='default'
   }
   this.productService.searchProducts().subscribe((products: product[]) => {
@@ -50,18 +50,13 @@ if (val.url){
 
   
 }
-  goToLogin(){
-    this.router.navigateByUrl('/login')
-  }
-  goToseller(){
-    this.router.navigateByUrl('/seller-auth')
-  }
+
   goToHome(){
-    this.router.navigateByUrl('/')
+    this.router.navigateByUrl('/');
   }
   sellerLogout(){
-    localStorage.removeItem('seller')
-    this.router.navigateByUrl('/')
+    localStorage.removeItem('seller');
+    this.router.navigateByUrl('/');
   }
   addProduct(){
     this.router.navigateByUrl('selleraddproduct');
@@ -78,7 +73,7 @@ if (val.url){
     } else {
       this.filteredProducts = this.product || [];
     }
-    console.log('Filtered products:', this.filteredProducts); // Debug
+    console.log('Filtered products:', this.filteredProducts);
   }
   selectProduct(productName:string):void{
 this.searchQuery = productName;
@@ -103,9 +98,14 @@ this.filterProducts(this.searchQuery);
 }
   
 gotoproDetails(id:any){
-  this.router.navigate(['/productdetails/'+id])
+  this.router.navigate(['/productdetails/'+id]);
 }
- 
+goToUser(){
+  this.router.navigateByUrl('/user-auth');
+}
+goToseller(){
+  this.router.navigateByUrl('/seller-auth');
+}
   
 }
 

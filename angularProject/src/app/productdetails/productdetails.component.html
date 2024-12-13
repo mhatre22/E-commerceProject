@@ -9,9 +9,10 @@
 <h2>{{productData.productName}}</h2>
 <h4>Price: {{productData.price}}</h4>
         </div>
-      <div>
-        Color:
-        <h5 [style.backgroundColor]="productData.color" class="product-color"></h5>
+        <div class="btn-group">
+        Color: &nbsp;
+        <h5 [style.backgroundColor]="productData.color1" class="product-color"></h5>&nbsp;&nbsp;
+        <h5 [style.backgroundColor]="productData.color2" class="product-color"></h5>
       </div>
       <h6>Category :{{productData.category}}</h6>
       <h6>Description :{{productData.description}}</h6>

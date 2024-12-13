@@ -33,7 +33,8 @@ this.productService.getproductId(this.id).subscribe((result)=>{
     id:updateForm.value.id,
     productName:updateForm.value.productName,
     category  :updateForm.value.category,
-    color     :updateForm.value.color,
+    color1     :updateForm.value.color,
+    color2     :updateForm.value.color,
     price     :updateForm.value.price,
     description :updateForm.value.description,
     image     :updateForm.value.image
