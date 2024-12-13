@@ -12,8 +12,8 @@ export const sellerauthGuard: CanActivateFn = ()=> {
   if (sellerService.issellerLoggIn) {
     return true;
   }
-
-  router.navigateByUrl('');
+  alert("Seller Please Login !!")
+  router.navigateByUrl('/seller-auth');
   return false; 
 };
   

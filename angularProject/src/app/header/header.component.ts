@@ -1,5 +1,5 @@
 import { query } from '@angular/animations';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -12,10 +12,16 @@ import { ProductService } from 'src/assets/Services/product.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  sellerName :string=""
-  constructor(private router: Router ) { 
+  menuType :string='default';
+sellerName :string="";
+searchQuery: string = '';
+product: product[] = [];
+filteredProducts: product[] = [];
+showSuggestions: boolean = false;
+  constructor(private router: Router,private productService:ProductService ) { 
+ 
     }
-    menuType :string='default';
+ 
   ngOnInit(): void {
 this.router.events.subscribe((val:any)=>{
 if (val.url){
@@ -32,6 +38,13 @@ if (val.url){
     console.log(" outside seller")
      this.menuType='default'
   }
+  this.productService.searchProducts().subscribe((products: product[]) => {
+    this.product = products;
+    this.filteredProducts = products;
+    products.length = 4;
+    console.log('Loaded products:', this.product);
+  });
+
 }
 })
 
@@ -44,11 +57,11 @@ if (val.url){
     this.router.navigateByUrl('/seller-auth')
   }
   goToHome(){
-    this.router.navigateByUrl('')
+    this.router.navigateByUrl('/')
   }
   sellerLogout(){
     localStorage.removeItem('seller')
-    this.router.navigateByUrl('')
+    this.router.navigateByUrl('/')
   }
   addProduct(){
     this.router.navigateByUrl('selleraddproduct');
@@ -56,7 +69,44 @@ if (val.url){
   productList(){
     this.router.navigateByUrl('sellerhome');
   }
-}
+  filterProducts(query: string): void {
+    console.log('Search query:', query);
+    if (query) {
+      this.filteredProducts = (this.product || []).filter(product =>
+        product.productName.toLowerCase().includes(query.toLowerCase())
+      );
+    } else {
+      this.filteredProducts = this.product || [];
+    }
+    console.log('Filtered products:', this.filteredProducts); // Debug
+  }
+  selectProduct(productName:string):void{
+this.searchQuery = productName;
+this.showSuggestions = false;
+this.filterProducts(this.searchQuery);
+  }
 
+  gotoSearch() {
+    if (this.searchQuery) {
+      this.router.navigate(['/searchresult'], {
+        queryParams: { search: this.searchQuery },
+      });
+    }
+  }
+  onFocus(): void {
+    this.showSuggestions = true;
+  }
+  onBlur(): void {
+    setTimeout(() => {
+      this.showSuggestions = false;
+    }, 200);
+}
+  
+gotoproDetails(id:any){
+  this.router.navigate(['/productdetails/'+id])
+}
+ 
+  
+}
 
 

@@ -29,7 +29,6 @@ export class SellerAuthComponent implements OnInit {
     console.log(loginData.value)
     this.logindata = loginData.value
  this.sellerService.sellerLogin(this.logindata);
- this.toster.success("Login Success !!")
   }
 
   opensignupSignup(){

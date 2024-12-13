@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { product } from '../class/datatypes';
+import { product} from '../class/datatypes';
 import { map, Observable, of } from 'rxjs';
 import { query } from '@angular/animations';
 
@@ -16,7 +16,7 @@ export class ProductService {
     return this.http.get<product[]>('http://localhost:3000/product?_limit=8');
   }
   postProduct(data:product){
-   return this.http.post('http://localhost:3000/product,data',data);
+   return this.http.post('http://localhost:3000/product',data);
     }
   
   getProduct(){
@@ -33,5 +33,8 @@ export class ProductService {
     updateProduct(body:any,id:any){
       return this.http.put<product>(`http://localhost:3000/product/${id}`,body);
 
+    }
+    searchProducts(): Observable<product[]> {
+      return this.http.get<product[]>('http://localhost:3000/product');
     }
   }

@@ -8,9 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
  import{sellerauthGuard} from './sellerauth.guard'
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
-import { SerachproductComponent } from './serachproduct/serachproduct.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
+import { SearchresultComponent } from './searchresult/searchresult.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 const routes: Routes = [
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'sellerhome',component:SellerhomeComponent ,canActivate:[sellerauthGuard]},
   {path:'selleraddproduct',component:SelleraddproductComponent,canActivate:[sellerauthGuard]},
   {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]},
-  {path:'searchResult',component:SerachproductComponent}
+  {path:'searchresult',component:SearchresultComponent},
+  {path:'productdetails/:id',component:ProductdetailsComponent}
 
 ];
 

@@ -41,7 +41,7 @@ this.productService.getproductId(this.id).subscribe((result)=>{
    this.productService.updateProduct(body,this.id).subscribe((data)=>{
     console.log(data)
     this.toster.success("Data Updated Success !!")
-    this.router.navigateByUrl('sellerhome')
+    this.router.navigateByUrl('/sellerhome')
    })
 
     }

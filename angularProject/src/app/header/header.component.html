@@ -1,32 +1,43 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-   
-<a (click)="goToHome()"><img src="\assets\E-commerce Project images\navbar.png" height="50px" width="300px" /></a>
-    <div *ngIf="menuType==='default'" class="container mt-3 space">
-      <input type="text"  class="form-control" name="query"  ngModel
-        placeholder="Search for Products,Brand and More" aria-label="Search" />
-        <button class="btn btn-primary" type="submit">Search</button>
-    </div>
-  <div [ngSwitch]="menuType">
-    <ul *ngSwitchCase="'default'">
-      <li>  <button class="btn btn-light" (click)="goToHome()"><i class="bi bi-house-fill"></i></button></li>
-     <li>   <button (click)="goToLogin()" class=" btn btn-light">Login</button></li>
-     <li>   <button type="button" class="btn btn-light"><i class="bi bi-cart"></i></button></li>
-    <li>    <button (click)="goToseller()" type="button" class="btn btn-light"> <i class="bi bi-shop"></i></button></li>
-       <li> <button type="button" class="btn btn-light"><i class="bi bi-three-dots-vertical"></i></button></li>
+
+    <a (click)="goToHome()"><img src="\assets\E-commerce Project images\navbar.png" height="50px" width="300px" /></a>
+    <div *ngIf="menuType ==='default'" class="container mt-3 space">
+      <input class="form-control" type="text" [(ngModel)]="searchQuery" (input)="filterProducts(searchQuery)"
+      (blur)="onBlur()"     (focus)="onFocus()" placeholder="Search for Products, Brand, and More" autocomplete="on" />&nbsp;&nbsp;
+      <button class="btn btn-primary" type="submit" (click)="gotoSearch()">Search</button><br/>
+      <div style="text-align:end; color: red;" *ngIf="filteredProducts.length === 0">&nbsp;No products found.</div>
+      <ul class="suggest-result" *ngIf="showSuggestions && filteredProducts.length > 0">
+        <li class="suggest-result-li" (click)="selectProduct(product.productName)"
+          *ngFor="let product of filteredProducts">{{ product.productName }}</li>
       </ul>
-    <ul *ngSwitchCase="'seller'" class="fit-box" >&nbsp;&nbsp;
-      <li> <button class="btn btn-primary"(click)="addProduct()"><i class="bi bi-file-plus-fill"></i>&nbsp;Add Product</button></li>&nbsp;
-      <li><button class="btn btn-primary"(click)="productList()" ><i class="bi bi-file-check-fill"></i>&nbsp;Product List</button></li>&nbsp;
-      <li> <button class="btn btn-primary" (click)="sellerLogout()" ><i class="bi bi-house-lock-fill"></i>&nbsp;LogOut</button></li>&nbsp;&nbsp;
-      <li><h6 style="color: rgb(247, 29, 54); text-align: center;"><u>Welcome {{sellerName |titlecase}} !!</u></h6></li>
-   
-    </ul>
+    </div>
+    <div [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'default'">
+        <li> <button class="btn btn-light" (click)="goToHome()"><i class="bi bi-house-fill"></i></button></li>
+        <li> <button (click)="goToLogin()" class=" btn btn-light">Login</button></li>
+        <li> <button type="button" class="btn btn-light"><i class="bi bi-cart"></i></button></li>
+        <li> <button (click)="goToseller()" type="button" class="btn btn-light"> <i class="bi bi-shop"></i></button>
+        </li>
+        <li> <button type="button" class="btn btn-light"><i class="bi bi-three-dots-vertical"></i></button></li>
+      </ul>
+      <ul *ngSwitchCase="'seller'" class="fit-box">&nbsp;&nbsp;
+        <li> <button class="btn btn-primary" (click)="addProduct()"><i class="bi bi-file-plus-fill"></i>&nbsp;Add
+            Product</button></li>&nbsp;
+        <li><button class="btn btn-primary" (click)="productList()"><i class="bi bi-file-check-fill"></i>&nbsp;Product
+            List</button></li>&nbsp;
+        <li> <button class="btn btn-primary" (click)="sellerLogout()"><i
+              class="bi bi-house-lock-fill"></i>&nbsp;LogOut</button></li>&nbsp;&nbsp;
+        <li>
+          <h6 style="color: rgb(247, 29, 54); text-align: center;"><u>Welcome {{sellerName |titlecase}} !!</u></h6>
+        </li>
 
-  </div>
+      </ul>
+
+    </div>
 
 
- 
+
   </nav>
 
 

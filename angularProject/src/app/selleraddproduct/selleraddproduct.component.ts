@@ -18,7 +18,7 @@ export class SelleraddproductComponent implements OnInit{
  
   addProductdata:any
   ngOnInit(): void {
-this.productService.getProduct()
+this.productService.getProduct();
   }
   addProduct(addproduct:NgForm){
     console.log(addproduct.value)
@@ -28,7 +28,7 @@ this.productService.getProduct()
       this,this.addProductdata = data;
     })
   this.toastr.success("Product Add")
-  this.router.navigateByUrl('sellerproductlist')
+  this.router.navigateByUrl('/sellerhome')
     
   }
 

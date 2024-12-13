@@ -10,6 +10,7 @@ import { ProductService } from 'src/assets/Services/product.service';
 })
 export class HomeComponent implements OnInit{
 popularProduct :undefined | product[]
+id:any;
   constructor(private router: Router,private product:ProductService) { }
   ngOnInit(): void {
   this.product.popularPro().subscribe((data)=>{
@@ -20,6 +21,9 @@ popularProduct :undefined | product[]
 
   goToLogin(){
     this.router.navigateByUrl('/login')
+  }
+  gotoproDetails(id:any){
+    this.router.navigate(['/productdetails/'+id])
   }
   
 }

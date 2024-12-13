@@ -16,9 +16,10 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
 import { SelleraddproductComponent } from './selleraddproduct/selleraddproduct.component';
 import { NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 
-import { SerachproductComponent } from './serachproduct/serachproduct.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdate-product.component';
+import { SearchresultComponent } from './searchresult/searchresult.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 
@@ -33,9 +34,10 @@ import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdat
     CartComponent,
     SellerhomeComponent,
     SelleraddproductComponent,
-    SerachproductComponent,
     SellerAuthComponent,
     SellerupdateProductComponent,
+    SearchresultComponent,
+    ProductdetailsComponent,
 
 
 
