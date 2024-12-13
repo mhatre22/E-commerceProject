@@ -1,0 +1,21 @@
+.container{
+
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+    
+    }
+    .new{
+        text-align: end;
+        font-weight: 400;
+    
+        font-size: large;
+    }
+    
+    h4{
+        color: rgb(104, 102, 102);
+    }
+    a{
+        color: blue;
+    }
