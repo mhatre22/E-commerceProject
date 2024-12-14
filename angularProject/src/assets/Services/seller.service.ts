@@ -18,7 +18,7 @@ issellerLoggIn = new BehaviorSubject<boolean>(false)
     data,{observe:'response'}).subscribe((result)=>{
       this.issellerLoggIn.next(true);
       localStorage.setItem('seller',JSON.stringify(result.body))
-      this.router.navigateByUrl('/sellerhome')
+      this.router.navigateByUrl('/seller-login')
      console.log(result)
     })
    
@@ -42,7 +42,7 @@ issellerLoggIn = new BehaviorSubject<boolean>(false)
   reloadSeller(){
     if(localStorage.getItem('seller')){
     this.issellerLoggIn.next(true);
-    this.router.navigateByUrl('/sellerhome')
+    this.router.navigateByUrl('/sellerhome');
     }
   }
 

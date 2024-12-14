@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/assets/Services/user.service';
 
 @Component({
@@ -8,23 +9,13 @@ import { UserService } from 'src/assets/Services/user.service';
   styleUrls: ['./userauth.component.css']
 })
 export class UserauthComponent implements OnInit {
-  constructor(private userService:UserService){
+  showLogin = true;
+  constructor(private userService:UserService,private router:Router){
 
   }
-  showLogin = true;
+
   ngOnInit(): void {
     
-  }
-  sellerdata:any;
-  userSignup(sellerData:NgForm){
-   this.sellerdata = sellerData.value
-  
-  }
-  logindata:any;
-  goTouserLogin(loginData:NgForm){
-    console.log(loginData.value)
-    this.logindata = loginData.value
-
   }
 
   opensignupUser(){
@@ -33,7 +24,11 @@ export class UserauthComponent implements OnInit {
   openloginUser(){
     this.showLogin = true;
   }
-
-
-
+  userSignup(form: NgForm) {
+    if (form.valid) {
+      const formData = form.value; // Extract form data
+      console.log('Form Data:', formData);
+  }
+  }
+ 
 }

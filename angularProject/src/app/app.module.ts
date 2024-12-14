@@ -20,6 +20,7 @@ import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdat
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { UserauthComponent } from './userauth/userauth.component';
+import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { UserauthComponent } from './userauth/userauth.component';
     SellerupdateProductComponent,
     SearchresultComponent,
     ProductdetailsComponent,
-    UserauthComponent
+    UserauthComponent,
+    SellerloginComponent
   ],
   imports: [
     BrowserModule,

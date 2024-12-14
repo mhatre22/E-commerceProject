@@ -34,7 +34,7 @@ if (val.url){
       this.sellerName = sellerData.username;
       console.log(this.sellerName);
     }
-  }else{
+  }else  {
     console.log("outside seller")
      this.menuType='default'
   }

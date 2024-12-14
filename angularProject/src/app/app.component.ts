@@ -9,13 +9,15 @@ import { SellerService } from 'src/assets/Services/seller.service';
 })
 export class AppComponent implements OnInit {
   title = 'angularProject';
+  product: any;
+  popularProduct: any;
   constructor(private router:Router,private sellerService:SellerService){
 
   }
 
 
   ngOnInit(): void {
-
+ 
 }
 
 }

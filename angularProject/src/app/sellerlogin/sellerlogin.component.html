@@ -1,0 +1,16 @@
+<div class="container"><br/>
+    <h3>Login Seller<br/></h3>
+    <h4>Get access to your Orders,</h4>
+    <h4>Wishlist & Recommendation</h4>
+    <form #sellerLoginForm="ngForm" (ngSubmit)="goTosellerLogin(sellerLoginForm)">
+      <label for="email"   class="form-label">Email ID:</label>
+      <input type="email" ngModel class="form-control" name="email" />
+
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" ngModel class="form-control" name="password" ><br/>
+      <button type="submit" class="btn btn-warning form-control"  [disabled]="!sellerLoginForm.valid"><b><u> Seller LOGIN</u></b></button>&nbsp;&nbsp;
+      <a class="new"  (click)=" opensignupUser()" ><b><u>New Seller SignUp ?</u></b></a><br/><br/>
+      </form>
+</div>
+    
+    

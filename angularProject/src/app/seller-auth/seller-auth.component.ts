@@ -10,7 +10,6 @@ import { SellerService } from 'src/assets/Services/seller.service';
   styleUrls: ['./seller-auth.component.css']
 })
 export class SellerAuthComponent implements OnInit {
-  showLogin = true;
   constructor(private router:Router,private toster:ToastrService,
     private sellerService:SellerService){
 
@@ -22,19 +21,12 @@ export class SellerAuthComponent implements OnInit {
   sellerSignup(sellerData:NgForm){
    this.sellerdata = sellerData.value
    this.sellerService.sellerSignup(this.sellerdata);
-   this.toster.success("SignUp Success !!")
+   this.toster.success("SignUp Success !!");
+  
   }
-  logindata:any;
-  goTosellerLogin(loginData:NgForm){
-    console.log(loginData.value)
-    this.logindata = loginData.value
- this.sellerService.sellerLogin(this.logindata);
+  
+  openloginUser(){
+    this.router.navigateByUrl('seller-login');
   }
 
-  opensignupSignup(){
-    this.showLogin = false;
-  }
-  openloginSeller(){
-    this.showLogin = true;
-  }
 }

@@ -13,12 +13,14 @@ import { SellerupdateProductComponent } from './sellerupdate-product/sellerupdat
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { UserauthComponent } from './userauth/userauth.component';
+import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
 
 const routes: Routes = [
 
   {path: '',component:HomeComponent},
 
 { path:'seller-auth',component:SellerAuthComponent},
+{path:'seller-login',component:SellerloginComponent},
   {path:'sellerhome',component:SellerhomeComponent ,canActivate:[sellerauthGuard]},
   {path:'selleraddproduct',component:SelleraddproductComponent,canActivate:[sellerauthGuard]},
   {path:'sellerupdateproduct/:id',component:SellerupdateProductComponent,canActivate:[sellerauthGuard]},
