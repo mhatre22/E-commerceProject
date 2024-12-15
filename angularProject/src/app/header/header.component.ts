@@ -101,10 +101,10 @@ gotoproDetails(id:any){
   this.router.navigate(['/productdetails/'+id]);
 }
 goToUser(){
-  this.router.navigateByUrl('/user-auth');
+  this.router.navigateByUrl('/user-login');
 }
 goToseller(){
-  this.router.navigateByUrl('/seller-auth');
+  this.router.navigateByUrl('/seller-login');
 }
   
 }

@@ -21,6 +21,8 @@ import { SearchresultComponent } from './searchresult/searchresult.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { UserauthComponent } from './userauth/userauth.component';
 import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
     SearchresultComponent,
     ProductdetailsComponent,
     UserauthComponent,
-    SellerloginComponent
+    SellerloginComponent,
+    UserhomeComponent,
+    UserloginComponent
   ],
   imports: [
     BrowserModule,

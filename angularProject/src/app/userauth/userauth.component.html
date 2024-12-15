@@ -1,9 +1,9 @@
 
 <br/><br/>
-<div *ngIf="!showLogin" class="container">
+<div class="container">
   <h3>Looks like you're new<br/> User here</h3>
 <h5>Sign up User with your details <br/>to get started</h5>
-<a style="color: blue; font-size: large;" (click)="openloginUser()" ><b><u>Already SignUp User ?</u></b></a>
+<a style="color: blue; font-size: large;" (click)="opensignupUser()" ><b><u>Already SignUp User ?</u></b></a>
   <form #userSignupForm="ngForm"  (ngSubmit)="userSignup(userSignupForm)"><br/>
     <div>
       <label for="username" class="form-label">Enter Username :</label>
@@ -30,19 +30,4 @@
   </form>
 
 </div>
-<!-------sellerLogin------>
-<div *ngIf="showLogin" class="container"><br/>
-    <h3>Login User<br/></h3>
-    <h4>Get access to your Orders,</h4>
-    <h4>Wishlist & Recommendation</h4>
-    <form #userLoginForm="ngForm">
 
-      <label for="email"   class="form-label">Email ID:</label>
-      <input type="email" ngModel class="form-control" name="email" />
-
-      <label for="password" class="form-label">Password:</label>
-      <input type="password" ngModel class="form-control" name="password" ><br/>
-      <button type="submit" class="btn btn-warning form-control"><b><u> USER LOGIN</u></b></button>&nbsp;&nbsp;
-      <a class="new"  (click)=" opensignupUser()" ><b><u>New User SignUp ?</u></b></a><br/><br/>
-      </form>
-    </div>

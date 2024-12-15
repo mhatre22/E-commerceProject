@@ -18,17 +18,15 @@ export class UserauthComponent implements OnInit {
     
   }
 
-  opensignupUser(){
-    this.showLogin = false;
-  }
-  openloginUser(){
-    this.showLogin = true;
-  }
+
   userSignup(form: NgForm) {
     if (form.valid) {
       const formData = form.value; // Extract form data
       console.log('Form Data:', formData);
+      this.router.navigateByUrl('user-login');
   }
   }
- 
+  opensignupUser(){
+    this.router.navigateByUrl('user-login');
+  }
 }
