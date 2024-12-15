@@ -11,7 +11,7 @@ import { SellerService } from 'src/assets/Services/seller.service';
 export class SellerloginComponent implements OnInit {
 constructor(private sellerService:SellerService, private router:Router){}
   ngOnInit(): void {
-   
+    this.sellerService.reloadSeller();
   }
   logindata:any;
   goTosellerLogin(loginData:NgForm){

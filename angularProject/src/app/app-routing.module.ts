@@ -16,6 +16,7 @@ import { UserauthComponent } from './userauth/userauth.component';
 import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { userauthGuard } from './userauth.guard';
 
 const routes: Routes = [
 
@@ -29,7 +30,7 @@ const routes: Routes = [
   {path:'searchresult',component:SearchresultComponent},
   {path:'productdetails/:id',component:ProductdetailsComponent},
   {path:'user-auth',component:UserauthComponent},
-  {path:'userhome',component:UserhomeComponent},
+  {path:'userhome',component:UserhomeComponent,canActivate:[userauthGuard]},
   {path:'user-login',component:UserloginComponent}
 
 

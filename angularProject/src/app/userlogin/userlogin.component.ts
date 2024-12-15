@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from 'src/assets/Services/user.service';
 
 @Component({
   selector: 'app-userlogin',
@@ -8,21 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./userlogin.component.css']
 })
 export class UserloginComponent implements OnInit {
-  constructor(private router:Router){}
+  constructor(private router:Router,private userService:UserService){}
   ngOnInit(): void {
-   
+    this.userService.reloadUser();
   }
-  userSignup(form: NgForm) {
-    if (form.valid) {
-      const formData = form.value; // Extract form data
-      console.log('Form Data:', formData);
-  }
-  }
+
   opensignupUser(){
     this.router.navigateByUrl('user-auth');
   }
-  goTosellerLogin(userlogin:NgForm){
-console.log(userlogin);
-this.router.navigateByUrl('userhome')
+  logindata:any;
+  goToUserLogin(loginData:NgForm){
+    console.log(loginData)
+    this.logindata = loginData.value
+   this.userService.userLogin(this.logindata);
   }
-}
+
+  
+  }

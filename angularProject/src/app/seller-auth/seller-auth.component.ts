@@ -15,7 +15,7 @@ export class SellerAuthComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.sellerService.reloadSeller()
+    this.sellerService.reloadSeller();
   }
   sellerdata:any;
   sellerSignup(sellerData:NgForm){

@@ -8,11 +8,37 @@
       "address": "pen-Raigad",
       "password": "444",
       "Confirmpassword": "444"
+    },
+    {
+      "id": "fc8e",
+      "username": "sumeet22",
+      "email": "sumeet1@gmail.com",
+      "contact": "9875463215",
+      "address": "pen-Raigad",
+      "password": "9595",
+      "confirmpassword": "9595"
     }
-  
   ],
-
-  "user": [],
+  "user": [
+    {
+      "id": "2904",
+      "username": "ram",
+      "email": "ram7@gmail.com",
+      "contact": "9524876315",
+      "address": "pen-Raigad",
+      "password": "7777",
+      "confirmpassword": "7777"
+    },
+    {
+      "id": "8357",
+      "username": "snehu22",
+      "email": "snehu22@gmail.com",
+      "contact": "9524876315",
+      "address": "pen-Raigad",
+      "password": "143",
+      "confirmpassword": "143"
+    }
+  ],
   "product": [
     {
       "productName": "iphone 13 Pro max",

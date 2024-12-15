@@ -14,6 +14,7 @@ import { ProductService } from 'src/assets/Services/product.service';
 export class HeaderComponent implements OnInit {
   menuType :string='default';
 sellerName :string="";
+userName:string=" ";
 searchQuery: string = '';
 product: product[] = [];
 filteredProducts: product[] = [];
@@ -27,14 +28,23 @@ this.router.events.subscribe((val:any)=>{
 if (val.url){
   if(localStorage.getItem('seller') && val.url.includes('seller')){
     console.log(" inside seller")
-    this.menuType = "seller"
+
     if(localStorage.getItem('seller')){
       let storeName = localStorage.getItem('seller');
       let sellerData =storeName && JSON.parse(storeName)[0];
       this.sellerName = sellerData.username;
       console.log(this.sellerName);
+        this.menuType = 'seller';
     }
-  }else  {
+  }else if (localStorage.getItem('user')){
+    console.log(" inside user")
+    let usernameStore = localStorage.getItem('user');
+    let userData = usernameStore && JSON.parse(usernameStore)[0];
+    this.userName =userData.username;
+    console.log(this.userName);
+    this.menuType ='user';
+  }
+  else{
     console.log("outside seller")
      this.menuType='default'
   }
@@ -58,6 +68,12 @@ if (val.url){
     localStorage.removeItem('seller');
     this.router.navigateByUrl('/');
   }
+  userLogout(){
+  localStorage.removeItem('user');
+  this.router.navigateByUrl('/')
+  }
+
+
   addProduct(){
     this.router.navigateByUrl('selleraddproduct');
   }

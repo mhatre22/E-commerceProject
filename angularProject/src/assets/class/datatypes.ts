@@ -27,12 +27,11 @@ export interface userLogin{
     password :number
 }
 export interface userSignup{
-  id: string,
+        id: string,
       username: string
       email  : string,
       contact: number,
       address: string,
-   
       password :number
       Confirmpassword: number
 

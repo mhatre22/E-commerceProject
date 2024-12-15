@@ -9,23 +9,22 @@ import { UserService } from 'src/assets/Services/user.service';
   styleUrls: ['./userauth.component.css']
 })
 export class UserauthComponent implements OnInit {
-  showLogin = true;
   constructor(private userService:UserService,private router:Router){
 
   }
 
   ngOnInit(): void {
-    
+ this.userService.reloadUser();
   }
 
+  usersignData:any;
+  userSignup(usersignup: NgForm) {
+     this.usersignData = usersignup.value;
+    this.userService.userSignup(this.usersignData)
+     
 
-  userSignup(form: NgForm) {
-    if (form.valid) {
-      const formData = form.value; // Extract form data
-      console.log('Form Data:', formData);
-      this.router.navigateByUrl('user-login');
   }
-  }
+
   opensignupUser(){
     this.router.navigateByUrl('user-login');
   }
