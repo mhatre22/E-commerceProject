@@ -30,7 +30,7 @@ export class UserService {
   if(result && result.body.length){
     this.toster.success("User Login Success !!")
     localStorage.setItem('user',JSON.stringify(result.body));
-    this.router.navigateByUrl('/userhome');
+    this.router.navigateByUrl("/");
 
   }else{
     this.toster.error("User Login Faild !!")
@@ -41,7 +41,7 @@ export class UserService {
 reloadUser(){
  if(localStorage.getItem('user')){
   this.isuserLoggIn.next(true);
-  this.router.navigateByUrl("/userhome");
+  this.router.navigateByUrl("/");
  }
 }
 }

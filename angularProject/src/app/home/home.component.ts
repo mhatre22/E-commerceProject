@@ -25,5 +25,8 @@ id:any;
   gotoproDetails(id:any){
     this.router.navigate(['/productdetails/'+id])
   }
+  addToCart(id:any){
+    this.router.navigate(['/productdetails/'+id]) 
+  }
   
 }

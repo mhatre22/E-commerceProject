@@ -8,7 +8,6 @@ import { query } from '@angular/animations';
   providedIn: 'root'
 })
 export class ProductService {
-
   constructor(private http:HttpClient) { }
 
 
@@ -37,4 +36,17 @@ export class ProductService {
     searchProducts(): Observable<product[]> {
       return this.http.get<product[]>('http://localhost:3000/product');
     }
+    localAddToCart(data:product) {
+     let cartData=[];
+     let localCart = localStorage.getItem('localcart');
+if(!localCart){
+  localStorage.setItem('localCart',JSON.stringify([data]));
+}else{
+ cartData = JSON.parse(localCart);
+ cartData.push(data);
+ localStorage.setItem('localCart',JSON.stringify(cartData));
+}
+
+    }
+   
   }

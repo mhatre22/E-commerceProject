@@ -14,7 +14,6 @@ import { SearchresultComponent } from './searchresult/searchresult.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { UserauthComponent } from './userauth/userauth.component';
 import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
-import { UserhomeComponent } from './userhome/userhome.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { userauthGuard } from './userauth.guard';
 
@@ -30,7 +29,6 @@ const routes: Routes = [
   {path:'searchresult',component:SearchresultComponent},
   {path:'productdetails/:id',component:ProductdetailsComponent},
   {path:'user-auth',component:UserauthComponent},
-  {path:'userhome',component:UserhomeComponent,canActivate:[userauthGuard]},
   {path:'user-login',component:UserloginComponent}
 
 

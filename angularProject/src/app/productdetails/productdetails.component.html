@@ -16,7 +16,7 @@
       </div>
       <h6>Category :{{productData.category}}</h6>
       <h6>Description :{{productData.description}}</h6>
-      <button class="btn btn-warning btn-act">Add to Cart</button>&nbsp;
+      <button class="btn btn-warning btn-act" (click)="addToCart()">Add to Cart</button>&nbsp;
       <button class="btn btn-primary btn-act">Buy Now</button>
       <div class="quantity-group">
 <button class="btn btn-danger" (click)="handleQuantity('min')">-</button>&nbsp;

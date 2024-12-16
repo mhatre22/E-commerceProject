@@ -4,7 +4,7 @@
   <h3>Looks like you're new<br/> User here</h3>
 <h5>Sign up User with your details <br/>to get started</h5>
 <a style="color: blue; font-size: large;" (click)="opensignupUser()" ><b><u>Already SignUp User ?</u></b></a>
-  <form #userSignupForm="ngForm"  (ngSubmit)="userSignup(userSignupForm)"><br/>
+  <form #userSignupForm="ngForm" (ngSubmit)="userSignup(userSignupForm)"><br/>
     <div>
       <label for="username" class="form-label">Enter Username :</label>
       <input class="form-control" type="text" ngModel  id ="username"  name="username" required/>

@@ -20,7 +20,8 @@ export interface product{
     color2: string;
     price:number,
     description:string,
-    image:string
+    image:string,
+    quantity:undefined |number
 }
 export interface userLogin{
     email  : string,
