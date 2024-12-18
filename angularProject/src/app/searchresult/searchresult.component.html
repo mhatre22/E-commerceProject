@@ -1,31 +1,33 @@
 <div class="row product-Details">
-    <hr/>
-    <h5 style="text-align: center;">Search Product "{{ searchQuery }}"</h5>
+
+    <h5 style="text-align: center;"><hr/>Search Product "{{ searchQuery }}"</h5><hr/><br/>
     <p style="color: blue;" *ngIf="searchResults.length === 0">No products found.</p>
     <ul *ngIf="searchResults.length > 0">
-        <li *ngFor="let product of searchResults">&nbsp;<hr/>
-            <div class="col-sm-6">
-                
-                <a routerLink="/productdetails/{{product.id}}"><img src="{{product.image}}"/></a><br/>
-            </div>
+         <li class="item-box" *ngFor="let product of searchResults">&nbsp;
             <div class="card">
-                <div class="col-sm-6 containt">
-                    <b>Product:</b><a routerLink="/productdetails/{{product.id}}">{{ product.productName }}</a><br />
-                        <b>Price: {{product.price}}</b><br/>
-                         <h6>Category:  <u style="color: rgb(35, 15, 133); font-size: large;">{{product.category}}</u></h6><br />
-                             <div class="color-group">&nbsp;
-                                &nbsp;&nbsp; Color:&nbsp;
-                              <h5 [style.backgroundColor]="product.color1" class="product-color"></h5>&nbsp;
-                              <h5 [style.backgroundColor]="product.color2" class="product-color"></h5>
-                          </div>
-          
-                      <div class="btn-group">
-                        <button style="border-radius: 20px;width: 150px;" class="btn btn-warning">Add to Cart</button> &nbsp; &nbsp; &nbsp;
-                        <button style="border-radius: 20px;width: 150px;" class="btn btn-danger">Remove Item</button>
-                      </div>
-                      &nbsp;
-                      </div>
+                <div class="col-sm-6 containts">
+                
+                    <a routerLink="/productdetails/{{product.id}}"><img src="{{product.image}}"/></a><br/>
+                </div>
+                <div class="col-sm-6 containts">
+                    <div class="Details">
+                        <a routerLink="/productdetails/{{product.id}}"> <h2>{{product.productName}}</h2></a>
+        <h4>Price: {{product.price}}</h4>
+                </div>
+                <div class="btn-group">
+                Color: &nbsp;
+                <h5 [style.backgroundColor]="product.color1" class="product-color"></h5>&nbsp;&nbsp;
+                <h5 [style.backgroundColor]="product.color2" class="product-color"></h5>
+              </div>
+              <h6>Category :{{product.category}}</h6>
+              <h6>Description :{{product.description}}</h6>
+        
+              </div>
+           
             </div>
+
+
+
             &nbsp;
         </li>&nbsp;
     

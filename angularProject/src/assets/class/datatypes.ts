@@ -37,3 +37,17 @@ export interface userSignup{
       Confirmpassword: number
 
 }
+export interface cart{
+    userId: any;
+    productId: number;
+    id?: number | undefined;
+    productName?: string | undefined;
+    category?: string | undefined;
+    color1?: string | undefined;
+    color2?: string | undefined;
+    price?: number | undefined;
+    description?: string | undefined;
+    image?: string | undefined;
+    quantity?: undefined | number;
+    userName?:string|undefined
+}

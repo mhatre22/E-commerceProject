@@ -160,5 +160,20 @@
       "image": "https://m.media-amazon.com/images/I/61giwQtR1qL._SX679_.jpg",
       "id": "5a4d"
     }
+  ],
+  "cart": [
+    {
+      "id": "de1b",
+      "productName": " Fastrack FR1 watch",
+      "category": "SmartWatch",
+      "color1": "#e4ec3b",
+      "color2": "#090901",
+      "price": "1,999₹",
+      "description": "Bluetooth 5.2\nBluetooth Calling\n1.39 inches Touch Display\nWater Resistant, 1.5 m\nDust Proof\nHeart Rate Monitor\nSpO2 (Blood Oxygen) Monitor\nPedometer, Sleep Monitor, Calorie Count, Step Count",
+      "image": "https://cdn1.smartprix.com/rx-iiXaQHa6a-w1200-h1200/iXaQHa6a.jpg",
+      "quantity": 2,
+      "userId": "2904",
+      "productId": "949a"
+    }
   ]
 }

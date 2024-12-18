@@ -16,12 +16,13 @@
       </div>
       <h6>Category :{{productData.category}}</h6>
       <h6>Description :{{productData.description}}</h6>
-      <button class="btn btn-warning btn-act" (click)="addToCart()">Add to Cart</button>&nbsp;
+      <button *ngIf="!removedCart" class="btn btn-warning btn-act" (click)="addToCart()">Add to Cart</button>&nbsp;
+      <button  *ngIf="removedCart" (click)="removeCart(productData.id)" class="btn btn-danger btn-act">Remove Item</button>&nbsp;
       <button class="btn btn-primary btn-act">Buy Now</button>
       <div class="quantity-group">
-<button class="btn btn-danger" (click)="handleQuantity('min')">-</button>&nbsp;
-<input type="text" value="{{productQuantity}}"/>&nbsp;
-<button class="btn btn-success" (click)="handleQuantity('plus')">+</button>
+<button class="btn btn-primary" (click)="handleQuantity('min')">-</button>
+<input type="text" value="{{productQuantity}}"/>
+<button class="btn btn-primary" (click)="handleQuantity('plus')">+</button>
 
       </div>
     </div>

@@ -11,12 +11,19 @@ import { ProductService } from 'src/assets/Services/product.service';
 export class SearchresultComponent implements OnInit {
   searchQuery: string = '';
   searchResults: product[] = [];
+  productQuantity:number =1;
+quantity:Number=1;
+  id:any;
+  productData: undefined|product;
+  removedCart =false;
   constructor(private productService: ProductService,private route: ActivatedRoute,private router:Router) {}
 ngOnInit(): void {
   this.route.queryParams.subscribe(params => {
     this.searchQuery = params['search'];
     this.fetchResults();
   });
+
+
  
 }
 fetchResults(): void {
@@ -28,6 +35,12 @@ fetchResults(): void {
     );
     console.log('Filtered results:', this.searchResults); // Debugging
   });
+
 }
+
+
+
+
+
 
 }

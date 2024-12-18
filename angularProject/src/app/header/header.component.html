@@ -19,12 +19,22 @@
     <div [ngSwitch]="menuType">
 
       <ul *ngSwitchCase="'default'">
-        <li> <button class="btn btn-light" (click)="goToHome()"><i class="bi bi-house-fill"></i></button></li>
-        <li> <button (click)="goToUser()" class=" btn btn-light">Login</button></li>
-        <li> <button type="button" class="btn btn-light"><i class="bi bi-cart"></i></button></li>
-        <li> <button (click)="goToseller()" type="button" class="btn btn-light"> <i class="bi bi-shop"></i></button>
+        <li> <button class="btn btn-light hover-btn" (click)="goToHome()"><i class="bi bi-house-fill"></i></button>
+          <span class="hover-text">Home</span>
         </li>
-        <li> <button type="button" class="btn btn-light"><i class="bi bi-three-dots-vertical"></i></button></li>
+        <li> <button (click)="goToUser()" class=" btn btn-light hover-btn">Login</button>
+          <span class="hover-text">Login</span>
+        </li>
+        <li> <button type="button" class="btn btn-light hover-btn"><i class="bi bi-cart"></i>({{addItems}})</button>
+          <span class="hover-text">Cart</span>
+        </li>
+        <li> <button (click)="goToseller()" type="button" class="btn btn-light hover-btn"> <i
+              class="bi bi-shop"></i></button>
+          <span class="hover-text">Seller</span>
+        </li>
+        <li> <button type="button" class="btn btn-light  hover-btn"><i class="bi bi-three-dots-vertical"></i></button>
+          <span class="hover-text">Help</span>
+        </li>
       </ul>
 
       <ul *ngSwitchCase="'seller'">
@@ -38,38 +48,45 @@
           <h4 style="color: rgb(247, 29, 54); text-align: center;"><u>Welcome {{sellerName |titlecase}} !!</u></h4>
         </li>
       </ul>
-      <ul *ngSwitchCase="'user'"  class="cont-1">
+      <ul *ngSwitchCase="'user'" class="cont-1">
         <li>
-         <input class="form-control len" type="text" [(ngModel)]="searchQuery" (input)="filterProducts(searchQuery)"
-        (blur)="onBlur()" (focus)="onFocus()" placeholder="Search for Products, Brand, and More"
-        autocomplete="on" />&nbsp;&nbsp;
-      <button class="btn btn-primary" type="submit" (click)="gotoSearch()">Search</button><br />&nbsp;&nbsp;
-      <div style="text-align:end; color: red;" *ngIf="filteredProducts.length === 0">&nbsp;No products found.</div>
-      <ul class="suggest-result disc" *ngIf="showSuggestions && filteredProducts.length > 0">
-        <li class="suggest-result-li" (click)="selectProduct(product.productName)"
-          *ngFor="let product of filteredProducts">{{ product.productName }}</li>
-      </ul>
+          <input class="form-control len" type="text" [(ngModel)]="searchQuery" (input)="filterProducts(searchQuery)"
+            (blur)="onBlur()" (focus)="onFocus()" placeholder="Search for Products, Brand, and More"
+            autocomplete="on" />&nbsp;&nbsp;
+          <button class="btn btn-primary" type="submit" (click)=" gotoSearch()">Search</button><br />&nbsp;&nbsp;
+          <div style="text-align:end; color: red;" *ngIf="filteredProducts.length === 0">&nbsp;No products found.</div>
+          <ul class="suggest-result disc" *ngIf="showSuggestions && filteredProducts.length > 0">
+            <li class="suggest-result-li" (click)="selectProduct(product.productName)"
+              *ngFor="let product of filteredProducts">{{ product.productName }}</li>
+          </ul>
         </li>
         <li> <button class="btn btn-light hover-btn" (click)="goToHome()"><i class="bi bi-house-fill"></i></button>
           <span class="hover-text">Home</span>
         </li>&nbsp;&nbsp;
         <li> <button (click)="goToUser()" class=" btn btn-light hover-btn"><i class="bi bi-person"></i></button>
-          <span class="hover-text">Login</span></li>
-        <li> <button type="button" class="btn btn-light hover-btn"><i class="bi bi-cart"></i>(0)</button>
-          <span class="hover-text">Cart(0)</span></li>&nbsp;
-        <li> <button (click)="goToseller()" type="button" class="btn btn-light hover-btn"> <i class="bi bi-shop"></i></button>&nbsp;
+          <span class="hover-text">Login</span>
+        </li>
+        <li> <button type="button" class="btn btn-light hover-btn"><i class="bi bi-cart"></i>({{addItems}})</button>
+          <span class="hover-text">Cart&nbsp;({{addItems}})</span>
+        </li>&nbsp;
+        <li> <button (click)="goToseller()" type="button" class="btn btn-light hover-btn"> <i
+              class="bi bi-shop"></i></button>&nbsp;
           <span class="hover-text">Seller</span>
         </li>
-        <li> <button type="button" (click)="userLogout()" class="btn btn-light hover-btn"><i class="bi bi-house-lock-fill hover-btn"></i></button>
-          <span class="hover-text">LogOut</span></li>&nbsp;
+        <li> <button type="button" (click)="userLogout()" class="btn btn-light hover-btn"><i
+              class="bi bi-house-lock-fill hover-btn"></i></button>
+          <span class="hover-text">LogOut</span>
+        </li>&nbsp;
         <li>
-        <li> <button type="button" class="btn btn-light hover-btn"><i class="bi bi-three-dots-vertical hover-btn"></i></button>
-          <span class="hover-text">Help</span></li>&nbsp;
+        <li> <button type="button" class="btn btn-light hover-btn"><i
+              class="bi bi-three-dots-vertical hover-btn"></i></button>
+          <span class="hover-text">Help</span>
+        </li>&nbsp;
         <li>
           <h4 style="color: rgb(247, 29, 54); text-align: center;"><u>Welcome {{userName |titlecase}} !!</u></h4>
         </li>
       </ul>
-     
+
     </div>
 
 

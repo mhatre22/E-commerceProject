@@ -16,9 +16,10 @@ export class HeaderComponent implements OnInit {
 sellerName :string="";
 userName:string=" ";
 searchQuery: string = '';
-product: product[] = [];
+product: product[] |undefined;
 filteredProducts: product[] = [];
 showSuggestions: boolean = false;
+addItems = 0;
   constructor(private router: Router,private productService:ProductService ) { 
  
     }
@@ -39,7 +40,7 @@ if (val.url){
   }else if (localStorage.getItem('user')){
     console.log(" inside user")
     let usernameStore = localStorage.getItem('user');
-    let userData = usernameStore && JSON.parse(usernameStore)[0];
+    let userData = usernameStore && JSON.parse(usernameStore);
     this.userName =userData.username;
     console.log(this.userName);
     this.menuType ='user';
@@ -54,6 +55,13 @@ if (val.url){
     products.length = 4;
     console.log('Loaded products:', this.product);
   });
+  let cartData = localStorage.getItem('localCart');
+  if(cartData){
+    this.addItems = JSON.parse(cartData).length
+  }
+this.productService.cartData.subscribe((items)=>{
+  this.addItems  = items.length;
+})
 
 }
 })
@@ -75,10 +83,10 @@ if (val.url){
 
 
   addProduct(){
-    this.router.navigateByUrl('selleraddproduct');
+    this.router.navigateByUrl('/selleraddproduct');
   }
   productList(){
-    this.router.navigateByUrl('sellerhome');
+    this.router.navigateByUrl('/sellerhome');
   }
   filterProducts(query: string): void {
     console.log('Search query:', query);
