@@ -3,7 +3,7 @@ export interface sellerLogin{
     password :number
 }
 export interface sellersignup{
-  id: string,
+      id: string,
       username: string
       email  : string,
       contact: number,
@@ -21,7 +21,7 @@ export interface product{
     price:number,
     description:string,
     image:string,
-    quantity:undefined |number
+    quantity:undefined |number,
 }
 export interface userLogin{
     email  : string,
@@ -36,18 +36,4 @@ export interface userSignup{
       password :number
       Confirmpassword: number
 
-}
-export interface cart{
-    userId: any;
-    productId: number;
-    id?: number | undefined;
-    productName?: string | undefined;
-    category?: string | undefined;
-    color1?: string | undefined;
-    color2?: string | undefined;
-    price?: number | undefined;
-    description?: string | undefined;
-    image?: string | undefined;
-    quantity?: undefined | number;
-    userName?:string|undefined
 }

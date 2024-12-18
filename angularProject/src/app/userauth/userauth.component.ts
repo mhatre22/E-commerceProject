@@ -27,4 +27,6 @@ export class UserauthComponent implements OnInit {
     this.router.navigateByUrl('user-login');
   }
 
+
+  
 }

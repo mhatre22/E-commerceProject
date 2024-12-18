@@ -22,6 +22,7 @@ export class UserloginComponent implements OnInit {
     console.log(loginData)
     this.logindata = loginData.value
    this.userService.userLogin(this.logindata);
+  
   }
 
   

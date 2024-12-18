@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { cart, product} from '../class/datatypes';
+import { product} from '../class/datatypes';
 import { map, Observable, of } from 'rxjs';
 import { query } from '@angular/animations';
 
@@ -58,7 +58,8 @@ export class ProductService {
       this.cartData.emit(items);
    } 
 }
-addtoCart(cartData:cart){
-  return this.http.post('http://localhost:3000/cart',cartData);
-}
+
+
+
+
 }

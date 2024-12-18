@@ -174,6 +174,54 @@
       "quantity": 2,
       "userId": "2904",
       "productId": "949a"
+    },
+    {
+      "id": "bfd2",
+      "productName": "ZEBRONICS LCD",
+      "category": "LCD",
+      "color1": "#e7e6ea",
+      "color2": "#070708",
+      "price": "35,000₹",
+      "description": "Acer 80 cm (32 inches) I Pro Series HD Ready Smart LED Google TV AR32HDIGU2841AT (Black)",
+      "image": "https://www.euronics.lv/UserFiles/Products/Images/65198-32pfl3258h-12-a1p-.jpg",
+      "quantity": 1,
+      "productId": "c6ea"
+    },
+    {
+      "id": "46cd",
+      "productName": "ZEBRONICS LCD",
+      "category": "LCD",
+      "color1": "#e7e6ea",
+      "color2": "#070708",
+      "price": "35,000₹",
+      "description": "Acer 80 cm (32 inches) I Pro Series HD Ready Smart LED Google TV AR32HDIGU2841AT (Black)",
+      "image": "https://www.euronics.lv/UserFiles/Products/Images/65198-32pfl3258h-12-a1p-.jpg",
+      "quantity": 1,
+      "productId": "c6ea"
+    },
+    {
+      "id": "c8fe",
+      "productName": "ZEBRONICS LCD",
+      "category": "LCD",
+      "color1": "#e7e6ea",
+      "color2": "#070708",
+      "price": "35,000₹",
+      "description": "Acer 80 cm (32 inches) I Pro Series HD Ready Smart LED Google TV AR32HDIGU2841AT (Black)",
+      "image": "https://www.euronics.lv/UserFiles/Products/Images/65198-32pfl3258h-12-a1p-.jpg",
+      "quantity": 4,
+      "productId": "c6ea"
+    },
+    {
+      "id": "ead4",
+      "productName": "iphone 13 Pro max",
+      "category": "Mobile",
+      "color1": "#c00505",
+      "color2": "#49bd0a",
+      "price": "75,000₹",
+      "description": "15.40 cm (6.1-inch) Super Retina XDR display Advanced camera system for better photos in any light Cinematic mode now in 4K Dolby Vision up to 30 fps",
+      "image": "https://mobilepriceall.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-Max.jpg",
+      "quantity": 1,
+      "productId": "d89f"
     }
   ]
 }

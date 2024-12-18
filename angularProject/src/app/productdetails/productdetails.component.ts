@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { cart, product } from 'src/assets/class/datatypes';
+import { product } from 'src/assets/class/datatypes';
 import { ProductService } from 'src/assets/Services/product.service';
 
 @Component({
@@ -58,22 +58,9 @@ if(this.productData){
     console.log("User is login");
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user).id
-    console.log("User Login Id=",userId);
-    let cartData = {
-      ...this.productData,
-      userId,
-      productId: this.productData!.id, 
-    };
-    delete cartData.id;
-    console.log(cartData);
-    this.productService.addtoCart(cartData).subscribe((result)=>{
-      console.log("result",result);
-      if(result){
-        this.toster.success("Product Added in Cart");
-      }
-    })
-  
-  }
+    console.log(userId);
+
+    }
 
 }
 removeCart(id:number){
@@ -81,6 +68,8 @@ removeCart(id:number){
   this.removedCart =false;
 
 }
+
+
 }
 
 

@@ -39,8 +39,8 @@ if (val.url){
     }
   }else if (localStorage.getItem('user')){
     console.log(" inside user")
-    let usernameStore = localStorage.getItem('user');
-    let userData = usernameStore && JSON.parse(usernameStore);
+    let storeuserName = localStorage.getItem('user');
+    let userData = storeuserName && JSON.parse(storeuserName)[0];
     this.userName =userData.username;
     console.log(this.userName);
     this.menuType ='user';
