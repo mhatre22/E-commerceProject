@@ -45,12 +45,12 @@
         <li> <button class="btn btn-primary" (click)="sellerLogout()"><i
               class="bi bi-house-lock-fill"></i>&nbsp;LogOut</button></li>&nbsp;&nbsp;
         <li>
-          <h4 style="color: rgb(247, 29, 54); text-align: center;"><u>Welcome {{sellerName |titlecase}} !!</u></h4>
+          <h4 style="color:blueviolet; text-align: center;"><u>{{sellerName |titlecase}} !!</u></h4>
         </li>
       </ul>
       <ul *ngSwitchCase="'user'" class="cont-1">
         <li>
-          <input class="form-control len" type="text" [(ngModel)]="searchQuery" (input)="filterProducts(searchQuery)"
+          <input class="form-control" type="text" [(ngModel)]="searchQuery" (input)="filterProducts(searchQuery)"
             (blur)="onBlur()" (focus)="onFocus()" placeholder="Search for Products, Brand, and More"
             autocomplete="on" />&nbsp;&nbsp;
           <button class="btn btn-primary" type="submit" (click)=" gotoSearch()">Search</button><br />&nbsp;&nbsp;
@@ -66,7 +66,7 @@
         <li> <button (click)="goToUser()" class=" btn btn-light hover-btn"><i class="bi bi-person"></i></button>
           <span class="hover-text">Login</span>
         </li>
-        <li> <button type="button" class="btn btn-light hover-btn"><i class="bi bi-cart"></i>({{addItems}})</button>
+        <li> <button type="button" (click)="cartProduct()" class="btn btn-light hover-btn"><i class="bi bi-cart"></i>({{addItems}})</button>
           <span class="hover-text">Cart&nbsp;({{addItems}})</span>
         </li>&nbsp;
         <li> <button (click)="goToseller()" type="button" class="btn btn-light hover-btn"> <i
@@ -81,9 +81,9 @@
         <li> <button type="button" class="btn btn-light hover-btn"><i
               class="bi bi-three-dots-vertical hover-btn"></i></button>
           <span class="hover-text">Help</span>
-        </li>&nbsp;
+        </li>
         <li>
-          <h4 style="color: rgb(247, 29, 54); text-align: center;"><u>Welcome {{userName |titlecase}} !!</u></h4>
+          <h4 > Welcome {{userName |titlecase}} !!</h4>
         </li>
       </ul>
 

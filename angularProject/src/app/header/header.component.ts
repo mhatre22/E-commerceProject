@@ -44,6 +44,7 @@ if (val.url){
     this.userName =userData.username;
     console.log(this.userName);
     this.menuType ='user';
+    this.productService.getCartByUserId(userData.id);
   }
   else{
     console.log("outside seller")
@@ -78,6 +79,7 @@ this.productService.cartData.subscribe((items)=>{
   }
   userLogout(){
   localStorage.removeItem('user');
+  this.productService.cartData.emit([]);
   this.router.navigateByUrl('/')
   }
 
@@ -130,7 +132,9 @@ goToUser(){
 goToseller(){
   this.router.navigateByUrl('/seller-login');
 }
-  
+cartProduct(){
+  this.router.navigateByUrl('/cart-page');
+}
 }
 
 

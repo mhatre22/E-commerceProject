@@ -16,6 +16,7 @@ import { UserauthComponent } from './userauth/userauth.component';
 import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { userauthGuard } from './userauth.guard';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
 
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'searchresult',component:SearchresultComponent},
   {path:'productdetails/:id',component:ProductdetailsComponent},
   {path:'user-auth',component:UserauthComponent},
-  {path:'user-login',component:UserloginComponent}
+  {path:'user-login',component:UserloginComponent},
+  {path:'cart-page',component:CartComponent}
 
 
 ];

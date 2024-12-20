@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { product } from 'src/assets/class/datatypes';
+import { cart, product } from 'src/assets/class/datatypes';
 import { ProductService } from 'src/assets/Services/product.service';
 
 @Component({
@@ -15,7 +15,11 @@ quantity:Number=1;
   id:any;
   productData: undefined|product;
   removedCart =false;
-  
+  cartDatalist: any;
+  cartData:any;
+  userId:any |number;
+  cartItems: any|product;
+  productId:any
 
 constructor(private toster:ToastrService,private productService:ProductService,
   private actiRoute: ActivatedRoute){
@@ -27,6 +31,22 @@ constructor(private toster:ToastrService,private productService:ProductService,
       console.log(result);
       this.productData = result;
     });
+
+    const user = localStorage.getItem('user');
+    if (user) {
+      const parsedUser = JSON.parse(user);
+      this.userId = Array.isArray(parsedUser) ? parsedUser[0]?.id : parsedUser.id;
+      console.log('Extracted User ID:', this.userId);
+      this.productService.getCartByUserId(this.userId);
+      this.productService.cartData.subscribe((result)=>{
+     let item =  result.filter((item:product)=>this.productId ===item.productId?.toString);
+     if(item.length) {
+      this.removedCart = true;
+     }
+      })
+
+     
+    }
     
     let cartData = localStorage.getItem('localCart');
     if(this.id && cartData){
@@ -38,7 +58,14 @@ constructor(private toster:ToastrService,private productService:ProductService,
         this.removedCart =false;
       }
     }
-  }
+
+    
+    }
+  
+
+
+
+
 handleQuantity(val:string){
   if(this.productQuantity < 20 && val ==='plus'){
    this.productQuantity+=1
@@ -50,25 +77,63 @@ addToCart() {
 if(this.productData){
   this.productData.quantity = this.productQuantity ;
 }
-  if(!localStorage.getItem('user')){
+if(!localStorage.getItem('user')){
     console.log(this.productData);
   this.productService.localAddToCart(this.productData!)
   this.removedCart = true;
   }else{
     console.log("User is login");
-    let user = localStorage.getItem('user');
-    let userId = user && JSON.parse(user).id
-    console.log(userId);
-
+    if (!this.productData) {
+      console.error('Product data is missing.');
+      return;
     }
+    const user = localStorage.getItem('user');
+    if (!user) {
+      console.error('User is not logged in.');
+      return;
+    }
+  
+    const parsedUser = JSON.parse(user);
+    console.log('Parsed User:', parsedUser);
+
+    const userId = Array.isArray(parsedUser) ? parsedUser[0]?.id : parsedUser.id;
+    console.log('User ID:', userId);
+  
+    if (!userId) {
+      console.error('User ID is missing.');
+      return;
+    }
+     let cartData = {
+      ...this.productData,
+      userId,
+      productId: this.productData.id!,
+      
+    };
+    cartData.id;
+    console.log('Cart Data:', cartData); 
+    this.productService.addToCart(cartData).subscribe(
+      (response) => {
+        console.log('Cart added successfully:', response);
+        this.productService.getCartByUserId(userId);
+        this.removedCart = true;
+        this.productService.transferCartDataToDB();
+      },
+      (error) => {
+        console.error('Error adding to cart:', error);
+      }
+    );
+ 
+  }
+setTimeout(()=>{
+  this.productService.getCartByUserId(this.userId);
+},2000)
 
 }
-removeCart(id:number){
-  this.productService.removedItemsCarts(id);
-  this.removedCart =false;
+removeCart(productId:number){
+  this.productService.removedItemsCarts(productId);
+  this.removedCart = true;
 
 }
-
 
 }
 

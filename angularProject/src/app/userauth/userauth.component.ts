@@ -20,7 +20,8 @@ export class UserauthComponent implements OnInit {
   usersignData:any;
   userSignup(usersignup: NgForm) {
      this.usersignData = usersignup.value;
-    this.userService.userSignup(this.usersignData)
+    this.userService.userSignup(this.usersignData);
+    this.router.navigateByUrl('/user-login');
   }
 
   opensignupUser(){

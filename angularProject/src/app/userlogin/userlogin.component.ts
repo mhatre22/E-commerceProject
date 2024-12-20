@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/assets/Services/product.service';
 import { UserService } from 'src/assets/Services/user.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { UserService } from 'src/assets/Services/user.service';
   styleUrls: ['./userlogin.component.css']
 })
 export class UserloginComponent implements OnInit {
-  constructor(private router:Router,private userService:UserService){}
+  constructor(private router:Router,private userService:UserService,private productService:ProductService){}
   ngOnInit(): void {
     this.userService.reloadUser();
   }
@@ -22,6 +23,8 @@ export class UserloginComponent implements OnInit {
     console.log(loginData)
     this.logindata = loginData.value
    this.userService.userLogin(this.logindata);
+  
+
   
   }
 
