@@ -60,3 +60,10 @@ export interface priceSummary{
     delivery:number,
     total:number
 }
+export interface orderNow{
+    email:string,
+    address:string,
+    contact:string,
+    totalPrice:number,
+    userId:number
+}

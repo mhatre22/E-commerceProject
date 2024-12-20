@@ -22,6 +22,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { UserauthComponent } from './userauth/userauth.component';
 import { SellerloginComponent } from './sellerlogin/sellerlogin.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { UserloginComponent } from './userlogin/userlogin.component';
     ProductdetailsComponent,
     UserauthComponent,
     SellerloginComponent,
-    UserloginComponent
+    UserloginComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

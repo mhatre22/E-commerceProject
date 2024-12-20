@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
-    <a (click)="goToHome()"><img src="\assets\E-commerce Project images\navbar.png" height="50px" width="300px" /></a>
+    <a (click)="goToHome()"><img src="\assets\E-commerce Project images\navbar.png" height="50px" width="350px" /></a>
     <div *ngIf="menuType ==='default'" class="container mt-3 space">
       <input class="form-control" type="text" [(ngModel)]="searchQuery" (input)="filterProducts(searchQuery)"
         (blur)="onBlur()" (focus)="onFocus()" placeholder="Search for Products, Brand, and More"
@@ -43,7 +43,7 @@
         <li><button class="btn btn-primary" (click)="productList()"><i class="bi bi-file-check-fill"></i>&nbsp;Product
             List</button></li>&nbsp;
         <li> <button class="btn btn-primary" (click)="sellerLogout()"><i
-              class="bi bi-house-lock-fill"></i>&nbsp;LogOut</button></li>&nbsp;&nbsp;
+              class="bi bi-house-lock-fill"></i>&nbsp;LogOut</button></li>&nbsp;&nbsp;&nbsp;&nbsp;
         <li>
           <h4 style="color:blueviolet; text-align: center;"><u>{{sellerName |titlecase}} !!</u></h4>
         </li>
@@ -82,8 +82,9 @@
               class="bi bi-three-dots-vertical hover-btn"></i></button>
           <span class="hover-text">Help</span>
         </li>
-        <li>
+        <li >
           <h4 > Welcome {{userName |titlecase}} !!</h4>
+        
         </li>
       </ul>
 

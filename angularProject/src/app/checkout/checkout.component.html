@@ -1,0 +1,26 @@
+<div>
+    <h3 >Checkout Details</h3>
+    <div class="row form-box">
+        <div class="col-sm-7">
+            <h4>Add Shipping address</h4>
+        
+            <form class="common-form" #checkoutData="ngForm" (ngSubmit)="order(checkoutData.value)">
+                <label for="name" class="form-label">Full Name :</label>
+                <input class="form-control" type="name" ngModel  id="name" name="name" required/>
+                <label for="email" class="form-label">Email Id :</label>
+                <input class="form-control" type="email" ngModel  id="email" name="email" required/>
+                <label for="" class="form-label">Address :</label>
+                <textarea class="form-control" type="address" ngModel  id="address" name="address" required></textarea>
+                <label for="contact" class="form-label">Contact :</label>
+                <input class="form-control" type="tel" ngModel  id="contact" name="contact" required/><br/>
+            <button type="submit" class="btn btn-warning form-control"><b><u>Order Now</u></b></button> 
+            </form>
+        </div>
+        <div class="col-sm-5">
+            <h4 style="padding-left: 40px;color: black;text-align: center;"> Total Amount  <span style="color: blue;">{{totalPrice}}</span>₹</h4>
+            <h5 style="padding-left: 70px; color: black;"> payment Method : <b>Cash On Delivery</b></h5>
+
+        </div>
+
+    </div>
+</div>

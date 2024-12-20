@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { cart, product} from '../class/datatypes';
+import { cart, orderNow, product} from '../class/datatypes';
 import { map, Observable, of } from 'rxjs';
 
 
@@ -100,5 +100,8 @@ currentCart(){
   return this.http.get<cart[]>('http://localhost:3000/cart?userId='+userData.id)
 
 }
-    
+   orderNow(orderData:orderNow){
+    return this.http.post('http://localhost:3000/order',orderData);
+
+   } 
 }
