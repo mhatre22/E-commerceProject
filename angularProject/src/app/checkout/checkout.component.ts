@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { cart, orderNow, priceSummary } from 'src/assets/class/datatypes';
+import { cart, orderNow } from 'src/assets/class/datatypes';
 import { ProductService } from 'src/assets/Services/product.service';
 
 @Component({
@@ -12,10 +11,10 @@ import { ProductService } from 'src/assets/Services/product.service';
 })
 export class CheckoutComponent implements OnInit {
   isPaymentModalVisible: boolean = false;
-  constructor(private router: Router, private productService: ProductService,private toster:ToastrService) { }
+  constructor(private router: Router, private productService: ProductService, private toster: ToastrService) { }
   cartData: undefined | cart[];
-totalPrice:undefined|number;
-orderData:any;
+  totalPrice: undefined | number;
+  orderData: any;
   ngOnInit(): void {
     this.productService.currentCart().subscribe((result) => {
       this.cartData = result;
@@ -29,41 +28,70 @@ orderData:any;
 
 
       });
- this.totalPrice = price+ (price / 20) + 100 - (price / 10);
- console.log(this.totalPrice)
+      this.totalPrice = price + (price / 20) + 100 - (price / 10);
+      console.log(this.totalPrice)
     });
 
 
 
 
   }
-  order(data:{email:string,address:string,contact:string}): void {
-let user = localStorage.getItem('user');
-let userId = user && JSON.parse(user).id;
-if(this.totalPrice){
-  let orderData :orderNow ={
-    ...data,
-    totalPrice: this.totalPrice,
-    userId
-  }
-  this.productService.orderNow(orderData).subscribe((result)=>{
-    if(result){
-      this.toster.success("Order is Placed Successfully")
-  
+  order(data: { email: string; address: string; contact: string }): void {
+
+    let user = localStorage.getItem('user');
+    console.log("Raw user from localStorage:", user);
+
+    const users = JSON.parse(user || '{}');
+    const userId = Array.isArray(users) ? users[0]?.id : users.id;
+    console.log('Parsed userId:', userId);
+
+
+
+    if (!userId) {
+      console.error("User ID not found in localStorage. Ensure the user is logged in.");
+      return; // Exit if userId is missing
     }
-    
-  })
-  
-}
 
-  
+    if (this.totalPrice) {
+      let orderData: orderNow = {
+        ...data,
+        totalPrice: this.totalPrice,
+        userId,
+        id: undefined,
+      };
+      if (this.cartData) {
+        this.cartData.forEach((item, index) => {
+          setTimeout(() => {
+            this.productService.deleteCartItem(item.id);
+          }, index * 600);
+        });
+      }
+      
+
+      this.productService.orderNow(orderData).subscribe((result) => {
+        console.log("Order response:", result);
+        if (result) {
+          this.toster.success("Order is Placed Successfully");
+          setTimeout(() => {
+            this.router.navigateByUrl('/myorder-page');
+          }, 4000)
+        }
+      });
+    } else {
+      console.error("Total price is missing.");
+    }
   }
 
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+

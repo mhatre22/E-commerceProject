@@ -32,9 +32,7 @@
               class="bi bi-shop"></i></button>
           <span class="hover-text">Seller</span>
         </li>
-        <li> <button type="button" class="btn btn-light  hover-btn"><i class="bi bi-three-dots-vertical"></i></button>
-          <span class="hover-text">Help</span>
-        </li>
+    
       </ul>
 
       <ul *ngSwitchCase="'seller'">
@@ -66,7 +64,7 @@
         <li> <button (click)="goToUser()" class=" btn btn-light hover-btn"><i class="bi bi-person"></i></button>
           <span class="hover-text">Login</span>
         </li>
-        <li> <button type="button" (click)="cartProduct()" class="btn btn-light hover-btn"><i class="bi bi-cart"></i>({{addItems}})</button>
+        <li> <button [routerLink]="addItems>0?'cart-page':null" class="btn btn-light hover-btn"><i class="bi bi-cart"></i>({{addItems}})</button>
           <span class="hover-text">Cart&nbsp;({{addItems}})</span>
         </li>&nbsp;
         <li> <button (click)="goToseller()" type="button" class="btn btn-light hover-btn"> <i
@@ -77,11 +75,12 @@
               class="bi bi-house-lock-fill hover-btn"></i></button>
           <span class="hover-text">LogOut</span>
         </li>&nbsp;
+        <li> <button type="button" routerLink="/myorder-page" class="btn btn-light hover-btn"><i
+          class="bi bi-gift hover-btn"></i></button>
+      <span class="hover-text">My Order's</span>
+    </li>&nbsp;
         <li>
-        <li> <button type="button" class="btn btn-light hover-btn"><i
-              class="bi bi-three-dots-vertical hover-btn"></i></button>
-          <span class="hover-text">Help</span>
-        </li>
+     
         <li >
           <h4 > Welcome {{userName |titlecase}} !!</h4>
         

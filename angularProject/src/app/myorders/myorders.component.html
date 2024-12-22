@@ -1,0 +1,46 @@
+<br/>
+
+<div class="order-box">
+    <div class="my-orders">
+        <h3>My Order's Details</h3>&nbsp;
+        <div class="row">
+            <div class="col-sm-2">
+                <span><h6>Order</h6></span>
+            </div>
+            <div class="col-sm-2">
+                <span><h6>Order Id</h6></span>
+            </div>
+            <div class="col-sm-2">
+                <span><h6>Price</h6></span>
+            </div>
+            <div class="col-sm-2">
+                <span> <h6>status</h6></span>
+            </div>
+            <div class="col-sm-2">
+                <span><h6>Action</h6></span>
+            </div><hr/>
+        </div>
+        <div class="row " *ngFor="let item of orderData">
+            <div class="col-sm-2">
+                <span><img class="orders-img" src="assets/E-commerce Project images/img.jpg" alt=""></span>
+            </div>
+            <div class="col-sm-2">
+                <span>#{{item.id}}</span>
+            </div>
+            <div class="col-sm-2">
+                <span>{{item.totalPrice}}</span>
+            </div>
+            <div class="col-sm-2">
+                <span>In Process</span>
+            </div>
+            <div class="col-sm-2">
+                <span><button class="btn btn-danger" *ngIf="item.id !== undefined"  (click)="cancelorder(item.id)">Cancel order</button></span>
+            </div>
+        </div>
+        
+     
+      
+      
+    </div>
+    
+</div>

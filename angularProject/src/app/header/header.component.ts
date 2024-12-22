@@ -132,9 +132,7 @@ goToUser(){
 goToseller(){
   this.router.navigateByUrl('/seller-login');
 }
-cartProduct(){
-  this.router.navigateByUrl('/cart-page');
-}
+
 }
 
 

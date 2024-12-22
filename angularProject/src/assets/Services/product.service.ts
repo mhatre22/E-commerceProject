@@ -104,4 +104,32 @@ currentCart(){
     return this.http.post('http://localhost:3000/order',orderData);
 
    } 
+   orderList(){
+    let storeuserName = localStorage.getItem('user');
+    let userData = storeuserName && JSON.parse(storeuserName)[0];
+    return this.http.get<orderNow[]>('http://localhost:3000/order?userId='+userData.id);
+   }
+   deleteCartItem(id: number): void {
+    const url = `http://localhost:3000/cart/${id}`; 
+  
+ 
+    this.http.delete(url, { observe: 'response' }).subscribe({
+      next: (result) => {
+        if (result) {
+          console.log(`Item with ID ${id} deleted successfully.`);
+          this.cartData.emit([]); 
+        }
+      },
+      error: (error) => {
+        console.error(`Failed to delete item with ID ${id}:`, error.message);
+      },
+    });
+  }
+  deleteOrder(orderId:number){
+    return this.http.delete('http://localhost:3000/order/'+orderId)
+  }
+  removedCarts(cartId: number) {
+    return this.http.delete(`http://localhost:3000/cart/${cartId}`, { observe: 'response' });
+  }
+  
 }
